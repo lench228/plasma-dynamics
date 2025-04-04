@@ -1,2 +1,85 @@
 @import "tailwindcss";
+@theme {
+    --font-sans: "Manrope", "sans-serif";
+}
 
+
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+
+    src: url('/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+
+@layer base {
+    @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype-variations');
+    }
+}
+
+
+
+@theme {
+    --color-accent: '#FF6A00';
+    --color-white:  '#FFFFFF';
+    --color-background:  '#F5F5F5';
+    --color-background-cards:  '#F0F0F0';
+    --color-separators:  '#E1E1E1';
+    --color-secondary:  '#848484';
+    --color-main:  '#101010';
+    --color-error:  '#ED0000';
+
+    --text-6xl: '3.5rem';
+    --text-3xl: '1.8rem';
+}
+
+
+
+@layer components {
+    /* Главные заголовки */
+    .display-text {
+        @apply text-9xl/[140px] font-bold;
+    }
+    .display-number {
+        @apply text-8xl/[115px] font-semibold;
+    }
+
+    /* Заголовки */
+    .header-1 {
+        @apply text-7xl/[76px] font-bold;
+    }
+    .header-2 {
+        @apply text-6xl/[63px] font-bold;
+    }
+    .header-3 {
+        @apply text-4xl/[44px] font-bold;
+    }
+    .header-4 {
+        @apply text-3xl/[76px] font-bold;
+    }
+
+    /* Основной */
+    .big-text {
+        @apply text-xl/[36px] font-medium;
+    }
+    .regular-text {
+        @apply text-xl/[28px];
+    }
+    .small-text {
+        @apply text-sm/[21px];
+    }
+
+    .link-text {
+        @apply text-xl  underline underline-offset-4;
+       color: var(--color-secondary);
+    }
+}
