@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { NavLink } from "shared/ui/nav-link";
+import { LINKS } from "widgets/navigation/model";
 
 export const Navigation = () => {
     return (
-        <nav className="bg-black text-white flex justify-between p-4">
+        <nav className="bg-black flex justify-between p-4 mt-auto">
             <NavLink path="/">
                 <Image
                     src={"/nav/logo.svg"}
@@ -13,21 +14,12 @@ export const Navigation = () => {
                     height={40}
                 ></Image>
             </NavLink>
-            <ul className={"flex"}>
-                <li></li>
-
-                <li>
-                    <NavLink path={"/about"}>О нас</NavLink>
-                </li>
-                <li>
-                    <NavLink path={"/goods"}>Услуги</NavLink>
-                </li>
-                <li>
-                    <NavLink path={"/examples"}>Примеры</NavLink>
-                </li>
-                <li>
-                    <NavLink path={"/contacts"}>Контакты</NavLink>
-                </li>
+            <ul className={"flex gap-8 items-center"}>
+                {LINKS.map((link, index) => (
+                    <li key={index}>
+                        <NavLink path={link.path}>{link.label}</NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

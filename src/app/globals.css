@@ -1,19 +1,4 @@
 @import "tailwindcss";
-@theme {
-    --font-sans: "Manrope", "sans-serif";
-}
-
-
-@font-face {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-
-    src: url('/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
-}
-
-
 
 
 @layer base {
@@ -29,22 +14,24 @@
 
 
 @theme {
-    --color-accent: '#FF6A00';
-    --color-white:  '#FFFFFF';
-    --color-background:  '#F5F5F5';
-    --color-background-cards:  '#F0F0F0';
-    --color-separators:  '#E1E1E1';
-    --color-secondary:  '#848484';
-    --color-main:  '#101010';
-    --color-error:  '#ED0000';
+    --font-sans: "Manrope", "sans-serif";
+}
 
-    --text-6xl: '3.5rem';
-    --text-3xl: '1.8rem';
+
+@theme {
+    --color-accent: #FF6A00;
+    --color-white:  #ffffff;
+    --color-background:  #F5F5F5;
+    --color-background-cards:  #F0F0F0;
+    --color-separators:  #E1E1E1;
+    --color-secondary: #848484;
+    --color-main:  #101010;
+    --color-error:  #ED0000;
 }
 
 
 
-@layer components {
+@layer utilities {
     /* Главные заголовки */
     .display-text {
         @apply text-9xl/[140px] font-bold;
@@ -64,7 +51,7 @@
         @apply text-4xl/[44px] font-bold;
     }
     .header-4 {
-        @apply text-3xl/[76px] font-bold;
+        @apply text-3xl/[32px] font-bold;
     }
 
     /* Основной */

@@ -1,1 +1,9 @@
-# plasma-dynamics
+# Сайт plasma-dynamics
+
+
+
+**@todo**
+
+--- 
+
+Оформить ридми

@@ -16,7 +16,9 @@
     "plugins": [
       {
         "name": "next"
-      }
+      },
+      {        "name": "tailwindcss",
+        "config": "./tailwind.config.js"}
     ],
     "baseUrl": "src",
 
@@ -24,7 +26,8 @@
       "/*": ["../public/*"],
       "widgets/*": ["widgets/*"],
       "shared/*": ["shared/*"]
-    }
+    },
+
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
