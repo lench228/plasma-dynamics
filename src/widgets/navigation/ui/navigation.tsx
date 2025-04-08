@@ -5,7 +5,7 @@ import { LINKS } from "widgets/navigation/model";
 
 export const Navigation = () => {
     return (
-        <nav className="bg-black flex justify-between p-4 mt-auto">
+        <nav className="bg-main flex justify-between p-4 mt-auto">
             <NavLink path="/">
                 <Image
                     src={"/nav/logo.svg"}

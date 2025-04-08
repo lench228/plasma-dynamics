@@ -13,14 +13,13 @@
 
 
 
-@theme {
+@theme static{
+
+    --color-*: initial;
+
     --font-sans: "Manrope", "sans-serif";
-}
-
-
-@theme {
+    --color-white: #fff;
     --color-accent: #FF6A00;
-    --color-white:  #ffffff;
     --color-background:  #F5F5F5;
     --color-background-cards:  #F0F0F0;
     --color-separators:  #E1E1E1;
@@ -56,7 +55,7 @@
 
     /* Основной */
     .big-text {
-        @apply text-xl/[36px] font-medium;
+        @apply text-2xl/[36px] font-medium;
     }
     .regular-text {
         @apply text-xl/[28px];
