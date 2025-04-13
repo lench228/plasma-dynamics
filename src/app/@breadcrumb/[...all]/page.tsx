@@ -16,7 +16,7 @@ const pathTranslations: Record<string, string> = {
     types: "Типы покрытий",
 };
 
-export default async function BreadcrumbSlot({ params }: { params: { all: string[] } }) {
+export default async function BreadcrumbSlot({ params }: { params: Promise<{ all: string[] }> }) {
     const breadcrumbItems: ReactElement[] = [];
     let breadcrumbPage: ReactElement = <></>;
 
