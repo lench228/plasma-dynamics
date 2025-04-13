@@ -21,7 +21,7 @@ export const NavLink = ({ path, links, children, isSelected }: NavLinkProps) => 
 
     return (
         <div
-            className="relative"
+            className="relative flex items-center"
             ref={navRef}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -35,26 +35,28 @@ export const NavLink = ({ path, links, children, isSelected }: NavLinkProps) => 
             >
                 <div className="flex items-center gap-2">
                     {children}
+
                     {links && (
-                        <motion.svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            animate={{ rotate: isHovered ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <path
-                                d="M18 9L12 15L6 9"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </motion.svg>
+                        <>
+                            <motion.svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                animate={{ rotate: isHovered ? 180 : 0 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <path
+                                    d="M18 9L12 15L6 9"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </motion.svg>
+                        </>
                     )}
                 </div>
-
                 <AnimatePresence>
                     {isSelected && (
                         <motion.div
@@ -66,7 +68,7 @@ export const NavLink = ({ path, links, children, isSelected }: NavLinkProps) => 
                 </AnimatePresence>
             </Link>
 
-            {links && <NavLinkList links={links} isOpen={isHovered} />}
+            {links?.length && <NavLinkList links={links} isOpen={isHovered} />}
         </div>
     );
 };

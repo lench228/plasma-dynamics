@@ -4,33 +4,32 @@ export interface iLink {
 }
 
 export interface iNavLink extends iLink {
-    links: iLink[];
+    links?: iLink[];
 }
 
 export const LINKS: iNavLink[] = [
-    { label: "О нас", path: "/about", links: [{ label: "Связаться", path: "/about/сontact" }] },
     {
-        label: "Услуги",
-        path: "/goods",
+        label: "Типы покрытый",
+        path: "/types",
         links: [
-            { label: "Напыление", path: "/goods/example" },
-            { label: "Газоплазменное напыление", path: "/goods/example2" },
+            { label: "Электроповодящее покрытие", path: "/types/1" },
+            { label: "Газоплазменное покрытие", path: "/types/2" },
         ],
     },
     {
-        label: "Примеры",
-        path: "/examples",
+        label: "Способы нанесения",
+        path: "/methods",
         links: [
-            { label: "Завод №9", path: "/examples/zav9" },
-            { label: "Еще компания", path: "/examples/someexmp" },
+            { label: "Плазменное напыление", path: "/methods/1" },
+            { label: "Высокоскоростное газопламенное напыление", path: "/methods/2" },
         ],
     },
     {
         label: "Контакты",
         path: "/contacts",
-        links: [
-            { label: "Что-то", path: "/contacts/some1" },
-            { label: "Что-то другое ", path: "/contacts/some2" },
-        ],
+    },
+    {
+        label: "О нас",
+        path: "/about",
     },
 ];

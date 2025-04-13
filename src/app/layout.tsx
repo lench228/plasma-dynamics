@@ -1,14 +1,13 @@
 import "./globals.css";
 import Head from "next/head";
 import { Navigation } from "widgets/navigation";
-import { Button } from "shared/ui";
-import { Preloader } from "shared/ui/preloader/preloader";
-import Image from "next/image";
 
 export default function RootLayout({
     children,
+    breadcrumb,
 }: Readonly<{
     children: React.ReactNode;
+    breadcrumb: React.ReactNode;
 }>) {
     return (
         <html lang="en">
@@ -75,30 +74,8 @@ export default function RootLayout({
             </Head>
             <body>
                 <Navigation></Navigation>
+                {breadcrumb}
                 {children}
-                <h1 className="display-text font-manrope">Display Text</h1>
-                <p className="display-number">42</p>
-                <h2 className="header-1 ">Header 1</h2>
-                <h3 className="header-2">Header 2</h3>
-                <h3 className="header-4">Header 4</h3>
-                <h3 className="main">Header 4</h3>
-                <p className="big-text">Большой текст</p>
-                <p className="regular-text">Обычный текст</p>
-                <p className="small-text">Мелкий текст</p>
-                <a href="#" className="link">
-                    Ссылка
-                </a>
-                <Button variant={"dark"}>черная кнопка</Button>
-                <Button variant={"white"}>белая кнопка</Button>
-                <Preloader></Preloader>
-                <div className={"flex gap-2"}>
-                    <Button variant={"icon"} disabled={true}>
-                        <Image src={"/icons/left.svg"} width={24} height={24} alt={"Предыдущий"} />
-                    </Button>
-                    <Button variant={"icon"}>
-                        <Image src={"/icons/right.svg"} width={24} height={24} alt={"Следующий"} />
-                    </Button>
-                </div>
             </body>
         </html>
     );
