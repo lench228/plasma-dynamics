@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
@@ -15,14 +15,14 @@ interface NavLinkProps {
     isSelected: boolean;
 }
 
-export const NavLink = ({ path, links, children, isSelected }: NavLinkProps) => {
+export const NavLink = (props: NavLinkProps) => {
+    const { path, links, children, isSelected } = props;
+
     const [isHovered, setIsHovered] = useState(false);
-    const navRef = useRef<HTMLDivElement>(null);
 
     return (
         <div
             className="relative flex items-center"
-            ref={navRef}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

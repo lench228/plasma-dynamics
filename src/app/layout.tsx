@@ -10,7 +10,7 @@ export default function RootLayout({
     breadcrumb: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="ru">
             <Head>
                 <>
                     <meta charSet="UTF-8" />
