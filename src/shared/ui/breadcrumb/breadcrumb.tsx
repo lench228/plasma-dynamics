@@ -25,15 +25,29 @@ export function BreadcrumbLink({
     className?: string;
 }) {
     return (
-        <Link href={href} className={clsx("text-sm font-medium hover:underline", className)}>
+        <Link
+            href={href}
+            className={clsx("big-text text-[#3A3A3A] font-medium hover:underline", className)}
+        >
             {children}
         </Link>
     );
 }
 
 export function BreadcrumbSeparator() {
-    return <span className="text-muted-foreground/50">/</span>;
+    return (
+        <svg
+            width="3"
+            height="22"
+            viewBox="0 0 3 22"
+            fill="E1E1E1"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect width="3" height="22" rx="1.5" fill="#D9D9D9" />
+        </svg>
+    );
 }
+
 export function BreadcrumbPage({
     children,
     className,
@@ -42,6 +56,8 @@ export function BreadcrumbPage({
     className?: string;
 }) {
     return (
-        <span className={clsx("text-sm font-medium text-foreground", className)}>{children}</span>
+        <span className={clsx("big-text font-medium text-accent underline", className)}>
+            {children}
+        </span>
     );
 }

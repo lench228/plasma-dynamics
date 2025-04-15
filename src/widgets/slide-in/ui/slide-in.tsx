@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { SlideInImage } from "widgets/slide-in/ui/slide-in-image";

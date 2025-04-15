@@ -60,6 +60,15 @@ export default async function BreadcrumbSlot({ params }: { params: Promise<{ all
                 )}
                 {breadcrumbPage}
             </BreadcrumbList>
+            <svg
+                width="1340"
+                height="3"
+                viewBox="0 0 1340 3"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect width="1360" height="3" fill="#D9D9D9" />
+            </svg>
         </Breadcrumb>
     );
 }

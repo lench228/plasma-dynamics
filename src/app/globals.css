@@ -34,7 +34,8 @@
 @layer utilities {
     /* Изображения*/
     .bg-hero{
-        background: url("/hero/hero.webp") center no-repeat;
+        background: url("/hero/hero.webp") no-repeat center;
+        background-size: cover;
     }
 
 
@@ -64,6 +65,8 @@
     .big-text {
         @apply text-2xl/[36px] font-medium;
     }
+
+
     .regular-text {
         @apply text-xl/[28px];
     }
