@@ -29,7 +29,7 @@ export const NavLink = (props: NavLinkProps) => {
             <Link
                 href={path}
                 className={clsx(
-                    "group font-manrope regular-text",
+                    "group font-manrope small-text",
                     "text-white hover:text-accent transition-colors"
                 )}
             >
@@ -39,9 +39,9 @@ export const NavLink = (props: NavLinkProps) => {
                     {links && (
                         <>
                             <motion.svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 20"
                                 fill="none"
                                 animate={{ rotate: isHovered ? 180 : 0 }}
                                 transition={{ duration: 0.2 }}

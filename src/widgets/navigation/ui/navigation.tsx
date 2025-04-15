@@ -11,7 +11,7 @@ export const Navigation = () => {
     const curPath = usePathname().split("/")[1];
 
     return (
-        <nav className="bg-main flex justify-between p-4 mt-auto">
+        <nav className="bg-main flex justify-between p-4 mt-auto sticky">
             <Image src={"/nav/logo.svg"} alt={"Plasma Dynamics"} width={336} height={40}></Image>
 
             <LayoutGroup id={"underline"}>

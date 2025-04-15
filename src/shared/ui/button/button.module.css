@@ -5,6 +5,7 @@
     border: 2px solid;
     border-radius: 24px;
     border-color: var(--color-main);
+    font-weight: 600;
 
     width: fit-content;
 
@@ -24,6 +25,7 @@
 }
 
 .white{
+    color: var(--color-main);
     background-color: var(--color-white);
     &:active {background-color: var(--color-main)};
 }

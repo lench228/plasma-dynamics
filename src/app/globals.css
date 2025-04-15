@@ -26,11 +26,18 @@
     --color-secondary: #848484;
     --color-main:  #101010;
     --color-error:  #ED0000;
+
 }
 
 
 
 @layer utilities {
+    /* Изображения*/
+    .bg-hero{
+        background: url("/hero/hero.webp") center no-repeat;
+    }
+
+
     /* Главные заголовки */
     .display-text {
         @apply text-9xl/[140px] font-bold;
