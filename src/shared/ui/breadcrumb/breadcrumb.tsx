@@ -8,7 +8,7 @@ export function Breadcrumb({ children }: { children: React.ReactNode }) {
 }
 
 export function BreadcrumbList({ children }: { children: React.ReactNode }) {
-    return <ol className="flex items-center gap-2">{children}</ol>;
+    return <ol className="flex items-center gap-3">{children}</ol>;
 }
 
 export function BreadcrumbItem({ children }: { children: React.ReactNode }) {
