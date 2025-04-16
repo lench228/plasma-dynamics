@@ -1,17 +1,41 @@
 import React from "react";
-import classNames from "./input.module.css";
+import clsx from "clsx";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     validate: (value: string) => boolean;
-    label: string;
+    label?: string;
+    isTextarea?: boolean;
 }
 
 export const Input = (props: InputProps) => {
-    const { type, label, validate } = props;
+    const { type, label, validate, placeholder, isTextarea } = props;
     return (
-        <div className={classNames.container}>
-            <label>{label}</label>
-            <input type={type} onChange={(e) => validate(e.target.value)} />
+        <div
+            className={clsx(
+                "flex flex-col max-w-[344px] gap-2",
+                isTextarea && "row-span-3 h-full w-full"
+            )}
+            key={label}
+        >
+            {!isTextarea ? (
+                <>
+                    <label className={"regular-text  text-white"}>{label}</label>
+                    <input
+                        className={
+                            "px-6 py-4  regular-text placeholder:text-secondary bg-background-cards rounded-xl"
+                        }
+                        type={type}
+                        onChange={(e) => validate(e.target.value)}
+                        placeholder={placeholder}
+                    />
+                </>
+            ) : (
+                <textarea
+                    className={"bg-background-cards h-full w-full p-4 rounded-xl"}
+                    placeholder={placeholder}
+                    onChange={(e) => validate(e.target.value)}
+                />
+            )}
         </div>
     );
 };
