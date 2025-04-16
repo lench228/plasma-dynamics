@@ -3,6 +3,8 @@ import Head from "next/head";
 import { Navigation } from "widgets/navigation";
 import { ContactUs } from "widgets/contact-us";
 import { Contacts } from "widgets/contacts";
+import YandexMapSimple from "shared/lib/yamap/yamap";
+import React from "react";
 
 export default function RootLayout({
     children,
@@ -80,6 +82,7 @@ export default function RootLayout({
                 {children}
                 <ContactUs></ContactUs>
                 <Contacts></Contacts>
+                <YandexMapSimple />
             </body>
         </html>
     );
