@@ -13,7 +13,7 @@ export const MotionBg = () => {
     const y = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
 
     return (
-        <div ref={ref} className="absolute  h-[617px] w-full overflow-hidden top-[310px]">
+        <div ref={ref} className=" w-full  ">
             <motion.div
                 style={{
                     backgroundPositionX: "center",
@@ -22,7 +22,7 @@ export const MotionBg = () => {
 
                     willChange: "transform",
                 }}
-                className="absolute bg-services w-full h-full z-[-1] top-0 left-0"
+                className="absolute bg-services w-full h-full z-[-1] top-[310px] left-0 max-h-[535px]"
             />
         </div>
     );

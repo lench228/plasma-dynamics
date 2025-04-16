@@ -1,6 +1,7 @@
 import "./globals.css";
 import Head from "next/head";
 import { Navigation } from "widgets/navigation";
+import { ContactUs } from "widgets/contact-us";
 
 export default function RootLayout({
     children,
@@ -76,6 +77,7 @@ export default function RootLayout({
                 <Navigation></Navigation>
                 {breadcrumb}
                 {children}
+                <ContactUs></ContactUs>
             </body>
         </html>
     );
