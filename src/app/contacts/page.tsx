@@ -1,4 +1,4 @@
-import { Form } from "../../features/form/form";
+import { Form } from "features/form/";
 
 export default function Contacts() {
     return <Form></Form>;
