@@ -37,6 +37,10 @@
         background: url("/hero/hero.webp") no-repeat center;
         background-size: cover;
     }
+    .bg-services{
+        background: url("/services/bg.webp") no-repeat center;
+        background-size: cover;
+    }
 
 
     /* Главные заголовки */
@@ -71,7 +75,7 @@
         @apply text-xl/[28px];
     }
     .small-text {
-        @apply text-sm/[21px];
+        @apply text-sm/[14px];
     }
 
     .link-text {

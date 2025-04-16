@@ -99,7 +99,7 @@ entities/    - Основные сущности (например, пользо
 
 breadcrumb.tsx -> React Компонент
 ```tsx
-// breadcrumb / index.ts
+// breadcrumb /index.ts
 export {
     BreadcrumbPage,
     BreadcrumbList,

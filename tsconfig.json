@@ -25,7 +25,8 @@
     "paths": {
       "/*": ["../public/*"],
       "widgets/*": ["widgets/*"],
-      "shared/*": ["shared/*"]
+      "shared/*": ["shared/*"],
+      "features/*": ["features/*"]
     },
 
   },
