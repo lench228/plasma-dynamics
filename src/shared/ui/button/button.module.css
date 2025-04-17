@@ -9,25 +9,28 @@
 
     width: fit-content;
 
+    cursor: pointer;
+
 
     &:hover {background-color: var(--color-accent); border-color: var(--color-accent); };
     &:active {background-color: var(--color-main); color: var(--color-white);};
     &:disabled {background-color: var(--color-secondary); border-color: var(--color-secondary);};
 
-    transition: background-color, color 0.1s ease-in ;
+    transition: background-color, color 0.3s ease-in ;
 }
 
 .dark{
     color: var(--color-white);
     background-color: var(--color-main);
     &:active {background-color: var(--color-white); color: var(--color-main);};
-
+    transition: background-color, color 0.1s ease-in ;
 }
 
 .white{
     color: var(--color-main);
     background-color: var(--color-white);
-    &:active {background-color: var(--color-main)};
+    &:active {background-color: var(--color-main);   } ;
+
 }
 
 .icon{

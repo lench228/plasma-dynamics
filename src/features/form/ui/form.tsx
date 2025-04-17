@@ -12,16 +12,17 @@ export const Form = () => {
                 "w-full h-full  grid grid-rows-3 grid-cols-2 items-center justify-center max-w-[728px]"
             }
         >
-            {FORM_DATA.map((input) => (
+            {FORM_DATA.map((input, index) => (
                 <Input
-                    key={input.label}
+                    key={index}
                     label={input.label}
                     placeholder={input.placeholder}
                     isTextarea={input.isTextarea}
+                    index={index}
                     validate={(val: string) => !!val.length}
                 />
             ))}
-            <Button variant={"white"} className={"mt-16"}>
+            <Button tabIndex={5} variant={"white"} className={"mt-16"}>
                 Оставьте заявку
             </Button>
         </form>

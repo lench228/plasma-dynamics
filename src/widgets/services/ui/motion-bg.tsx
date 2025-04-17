@@ -10,10 +10,10 @@ export const MotionBg = () => {
         target: ref,
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["160px", "-160px"]);
 
     return (
-        <div ref={ref} className=" w-full  ">
+        <div ref={ref} className="w-full ">
             <motion.div
                 style={{
                     backgroundPositionX: "center",

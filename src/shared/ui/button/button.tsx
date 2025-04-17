@@ -7,9 +7,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: ButtonProps) => {
-    const { children, variant, disabled, className } = { ...props };
+    const { children, variant, disabled, className, tabIndex } = { ...props };
     return (
-        <button disabled={disabled} className={clsx(classes.button, classes[variant], className)}>
+        <button
+            disabled={disabled}
+            tabIndex={tabIndex}
+            className={clsx(classes.button, classes[variant], className)}
+        >
             {children}
         </button>
     );

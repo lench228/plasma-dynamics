@@ -5,6 +5,7 @@ import { ContactUs } from "widgets/contact-us";
 import { Contacts } from "widgets/contacts";
 import YandexMapSimple from "shared/lib/yamap/yamap";
 import React from "react";
+import { Footer } from "widgets/footer";
 
 export default function RootLayout({
     children,
@@ -77,12 +78,13 @@ export default function RootLayout({
                 </>
             </Head>
             <body>
-                <Navigation></Navigation>
+                <Navigation />
                 {breadcrumb}
                 {children}
-                <ContactUs></ContactUs>
-                <Contacts></Contacts>
+                <ContactUs />
+                <Contacts />
                 <YandexMapSimple />
+                <Footer />
             </body>
         </html>
     );

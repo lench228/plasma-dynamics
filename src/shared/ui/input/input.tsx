@@ -5,10 +5,11 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     validate: (value: string) => boolean;
     label?: string;
     isTextarea?: boolean;
+    index: number;
 }
 
 export const Input = (props: InputProps) => {
-    const { type, label, validate, placeholder, isTextarea } = props;
+    const { type, label, validate, placeholder, isTextarea, index } = props;
     return (
         <div
             className={clsx(
@@ -21,6 +22,7 @@ export const Input = (props: InputProps) => {
                 <>
                     <label className={"regular-text  text-white"}>{label}</label>
                     <input
+                        tabIndex={index + 1}
                         className={
                             "px-6 py-4  regular-text placeholder:text-secondary bg-background-cards rounded-xl"
                         }
@@ -31,6 +33,7 @@ export const Input = (props: InputProps) => {
                 </>
             ) : (
                 <textarea
+                    tabIndex={5}
                     className={"bg-background-cards h-full w-full p-4 rounded-xl"}
                     placeholder={placeholder}
                     onChange={(e) => validate(e.target.value)}
