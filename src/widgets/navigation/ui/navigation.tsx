@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { NavLink } from "shared/ui/nav-link";
-import { LINKS } from "widgets/navigation/model";
+
 import { LayoutGroup } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { LINKS } from "widgets/navigation/model";
+import { NavLink } from "shared/ui";
 
-export const Navigation = () => {
+export default function Navigation() {
     const curPath = usePathname().split("/")[1];
 
     return (
@@ -39,4 +40,4 @@ export const Navigation = () => {
             </LayoutGroup>
         </nav>
     );
-};
+}

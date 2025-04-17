@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { FOOTER_ITEMS } from "widgets/footer/model/data";
+import { FOOTER_ITEMS } from "widgets/footer/model";
 import { FooterLinks } from "widgets/footer/ui/footer-links";
 
-export const Footer = () => {
+export default function Footer() {
     return (
         <footer
             className={
@@ -33,4 +33,4 @@ export const Footer = () => {
             </div>
         </footer>
     );
-};
+}

@@ -1,1 +1,1 @@
-export { CONTACTS, type iContact } from "./data";
+export { CONTACTS, type iContact } from "./contacts";

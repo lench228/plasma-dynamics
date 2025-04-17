@@ -1,10 +1,11 @@
 import React from "react";
-import { iAdventage } from "widgets/adventages";
+import { iAdvantage } from "widgets/adventages/model/advantages";
+
 import Image from "next/image";
 import clsx from "clsx";
 
 interface AdvantagesItemProps {
-    item: iAdventage;
+    item: iAdvantage;
     reversed: boolean;
 }
 

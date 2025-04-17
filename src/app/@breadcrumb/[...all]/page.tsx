@@ -5,7 +5,8 @@ import {
     BreadcrumbList,
     BreadcrumbPage,
     BreadcrumbSeparator,
-} from "shared/ui/breadcrumb";
+} from "shared/ui";
+
 import React from "react";
 import type { ReactElement } from "react";
 

@@ -1,11 +1,12 @@
 import React from "react";
-import { AdvantageItem, ADVENTAGES } from "widgets/adventages";
+import { AdvantageItem } from "widgets/adventages/ui/advantage-item";
+import { ADVANTAGES } from "widgets/adventages/model";
 
 export const Advantages = () => {
     return (
         <section>
             <ul>
-                {ADVENTAGES.map((advantage, index) => (
+                {ADVANTAGES.map((advantage, index) => (
                     <AdvantageItem
                         key={advantage.title}
                         item={advantage}

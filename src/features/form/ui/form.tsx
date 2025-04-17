@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
-import { Input } from "shared/ui/input";
-import { FORM_DATA } from "features/form";
+
+import { Input } from "shared/ui";
 import { Button } from "shared/ui";
+
+import { FORM_DATA } from "features/form/model";
 
 export const Form = () => {
     return (

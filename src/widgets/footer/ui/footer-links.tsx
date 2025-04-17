@@ -1,6 +1,6 @@
 import React from "react";
 
-import { iFooterItem } from "widgets/footer/model/data";
+import { iFooterItem } from "widgets/footer/model";
 import { FooterLink } from "widgets/footer/ui/footer-link";
 
 export const FooterLinks = (props: iFooterItem) => {

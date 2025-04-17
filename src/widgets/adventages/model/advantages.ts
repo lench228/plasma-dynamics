@@ -1,10 +1,10 @@
-export interface iAdventage {
+export interface iAdvantage {
     image: string;
     title: string;
     texts: string[];
 }
 
-export const ADVENTAGES: iAdventage[] = [
+export const ADVANTAGES: iAdvantage[] = [
     {
         image: "/advantages/1.webp",
         title: "Гибкость",

@@ -1,8 +1,9 @@
 import React from "react";
-import { CONTACTS } from "widgets/contacts/model";
-import { Contact } from "widgets/contacts/ui/contact";
 
-export const Contacts = () => {
+import { Contact } from "widgets/contacts/ui/contact";
+import { CONTACTS } from "widgets/contacts/model";
+
+export default function Contacts() {
     return (
         <section className={"p-20"}>
             <h2 className={"header-1 mb-20"}>Наши контакты</h2>
@@ -13,4 +14,4 @@ export const Contacts = () => {
             </ul>
         </section>
     );
-};
+}

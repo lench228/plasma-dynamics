@@ -1,1 +1,1 @@
-export { FORM_DATA } from "./data";
+export { FORM_DATA, type iFormData } from "./data";

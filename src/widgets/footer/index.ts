@@ -1,2 +1,1 @@
-export * from "./ui/footer";
-export * from "./ui/footer";
+export { default } from "./ui/footer";

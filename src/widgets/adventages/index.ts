@@ -1,2 +1,1 @@
-export * from "./ui";
-export * from "./model";
+export { Advantages } from "./ui/advantages";

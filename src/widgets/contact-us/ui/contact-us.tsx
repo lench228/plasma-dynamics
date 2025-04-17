@@ -2,7 +2,7 @@ import React from "react";
 import { Form } from "features/form";
 import Image from "next/image";
 
-export const ContactUs = () => {
+export default function ContactUs() {
     return (
         <section className={"flex flex-col items-center gap-20 "}>
             <h2 className={"header-2 mt-40"}>Свяжитесь с нами</h2>
@@ -17,4 +17,4 @@ export const ContactUs = () => {
             </main>
         </section>
     );
-};
+}
