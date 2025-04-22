@@ -63,10 +63,7 @@ export function BreadcrumbPage({
 }
 
 import React from "react";
-
-interface BreadcrumbsProps {
-    segments: string[];
-}
+import { usePathname } from "next/navigation";
 
 const pathTranslations: Record<string, string> = {
     methods: "Способы напыления",
@@ -78,7 +75,8 @@ const pathTranslations: Record<string, string> = {
     // Добавь другие переводы по необходимости
 };
 
-export default function Breadcrumbs({ segments }: BreadcrumbsProps) {
+export default function Breadcrumbs() {
+    const segments = usePathname().split("/");
     return (
         <Breadcrumb>
             <BreadcrumbList>

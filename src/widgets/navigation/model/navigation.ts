@@ -17,7 +17,7 @@ export const LINKS: iNavLink[] = [
         ],
     },
     {
-        label: "Типы покрытый",
+        label: "Напыляемые покрытия",
         path: "/types",
         links: [
             { label: "Flame Spray & Arc-Wire", path: "/types/flame" },
