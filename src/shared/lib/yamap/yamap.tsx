@@ -1,6 +1,6 @@
 export default function YandexMapSimple() {
     return (
-        <div className="w-screen h-[400px] rounded-lg">
+        <div className="w-full h-[400px] rounded-lg">
             <iframe
                 className={"w-full h-full"}
                 src={

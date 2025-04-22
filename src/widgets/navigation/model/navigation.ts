@@ -20,8 +20,10 @@ export const LINKS: iNavLink[] = [
         label: "Типы покрытый",
         path: "/types",
         links: [
-            { label: "Электроповодящее покрытие", path: "/types/1" },
-            { label: "Газоплазменное покрытие", path: "/types/2" },
+            { label: "Flame Spray & Arc-Wire", path: "/types/flame" },
+            { label: "HVOF", path: "/types/hvof" },
+            { label: "Plasma Spray", path: "/types/plasma" },
+            { label: " Spray & Fuse", path: "/types/spraynfuse" },
         ],
     },
     {

@@ -65,16 +65,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-    breadcrumb,
 }: Readonly<{
     children: React.ReactNode;
-    breadcrumb: React.ReactNode;
 }>) {
     return (
         <html lang="ru">
             <body>
                 <Navigation />
-                {breadcrumb}
                 {children}
                 <ContactUs />
                 <Contacts />

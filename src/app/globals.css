@@ -41,11 +41,16 @@
         background: url("/services/bg.webp") no-repeat center;
         background-size: cover;
     }
+    .bg-hvof{
+        background: url("/hvof/hero.webp");
+        background-size: cover;
+        height: 20% !important;
+    }
 
 
     /* Главные заголовки */
     .display-text {
-        @apply text-9xl/[140px] font-bold;
+        @apply text-7xl/[63px] font-extrabold;
     }
     .display-number {
         @apply text-8xl/[115px] font-semibold;
@@ -53,16 +58,16 @@
 
     /* Заголовки */
     .header-1 {
-        @apply text-7xl/[76px] font-bold;
+        @apply text-[64px]/[76px] font-bold;
     }
     .header-2 {
-        @apply text-6xl/[63px] font-bold;
+        @apply text-[52px]/[60px] font-bold;
     }
     .header-3 {
-        @apply text-4xl/[44px] font-bold;
+        @apply text-[48px]/[63px] font-bold;
     }
     .header-4 {
-        @apply text-3xl/[32px] font-bold;
+        @apply text-[40]/[63px] font-bold;
     }
 
     /* Основной */
@@ -75,7 +80,7 @@
         @apply text-xl/[28px];
     }
     .small-text {
-        @apply text-sm/[14px];
+        @apply text-sm/[18px];
     }
 
     .link-text {
