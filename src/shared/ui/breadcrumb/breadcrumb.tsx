@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -62,9 +65,6 @@ export function BreadcrumbPage({
     );
 }
 
-import React from "react";
-import { usePathname } from "next/navigation";
-
 const pathTranslations: Record<string, string> = {
     methods: "Способы напыления",
     about: "О нас",
@@ -72,7 +72,6 @@ const pathTranslations: Record<string, string> = {
     types: "Типы покрытий",
     flame: "Пламенное напыление",
     plasma: "Плазменное напыление",
-    // Добавь другие переводы по необходимости
 };
 
 export default function Breadcrumbs() {
@@ -83,7 +82,6 @@ export default function Breadcrumbs() {
                 <BreadcrumbItem>
                     <BreadcrumbLink href="/">Главная</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator />
 
                 {segments.map((segment, index) => {
                     const isLast = index === segments.length - 1;

@@ -1,17 +1,20 @@
 import React from "react";
-import { AdvantageItem } from "widgets/adventages/ui/advantage-item";
 import { ADVANTAGES } from "widgets/adventages/model";
+import { Figure } from "widgets/figure";
 
 export const Advantages = () => {
     return (
         <section>
             <ul>
                 {ADVANTAGES.map((advantage, index) => (
-                    <AdvantageItem
+                    <Figure
                         key={advantage.title}
-                        item={advantage}
+                        image={advantage.image}
+                        texts={advantage.texts}
                         reversed={index % 2 == 0}
-                    ></AdvantageItem>
+                        title={advantage.title}
+                        variant={"hero"}
+                    />
                 ))}
             </ul>
         </section>

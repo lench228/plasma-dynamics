@@ -1,7 +1,7 @@
 import React from "react";
 
-import Link from "next/link";
 import { iNavLink } from "widgets/navigation/model/navigation";
+import { BreadcrumbLink } from "shared/ui";
 
 interface TypesNavProps {
     link: iNavLink;
@@ -21,21 +21,18 @@ export const TypesNav = (props: TypesNavProps) => {
             >
                 {link.links &&
                     link.links.map((link) => (
-                        <>
-                            {" "}
-                            <li key={link.path} className={"text-2xl"}>
-                                <Link href={link.path}>{link.label}</Link>
-                                <svg
-                                    width="210"
-                                    height="2"
-                                    viewBox="0 0 210 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect width="210" height="2" fill="#D9D9D9" />
-                                </svg>
-                            </li>
-                        </>
+                        <li key={link.label} className={"text-2xl max-w-50"}>
+                            <BreadcrumbLink href={link.path}>{link.label}</BreadcrumbLink>
+                            <svg
+                                width="210"
+                                height="2"
+                                viewBox="0 0 210 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect width="210" height="2" fill="#D9D9D9" />
+                            </svg>
+                        </li>
                     ))}
             </ul>
         </nav>
