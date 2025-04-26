@@ -8,11 +8,13 @@ export const Advantages = () => {
             <ul>
                 {ADVANTAGES.map((advantage, index) => (
                     <Figure
+                        item={{
+                            image: advantage.image,
+                            texts: advantage.texts,
+                            title: advantage.title,
+                        }}
                         key={advantage.title}
-                        image={advantage.image}
-                        texts={advantage.texts}
                         reversed={index % 2 == 0}
-                        title={advantage.title}
                         variant={"hero"}
                     />
                 ))}

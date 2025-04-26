@@ -61,7 +61,7 @@ export const NavLink = (props: NavLinkProps) => {
                     {isSelected && (
                         <motion.div
                             layoutId="underline"
-                            className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
+                            className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-accent mt-4"
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                         />
                     )}

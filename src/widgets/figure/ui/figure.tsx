@@ -3,17 +3,16 @@ import Image from "next/image";
 
 import clsx from "clsx";
 import { TextContent } from "widgets/text-content";
+import { iImageSection } from "shared/types/section";
 
 interface FigureProps {
-    image: string;
-    title: string;
-    texts: string[];
+    item: iImageSection;
     variant: "hero" | "types";
     reversed: boolean;
 }
 
 export const Figure = (props: FigureProps) => {
-    const { image, title, texts, variant, reversed } = { ...props };
+    const { item, variant, reversed } = { ...props };
 
     return (
         <li
@@ -29,11 +28,11 @@ export const Figure = (props: FigureProps) => {
                     "py-6 md:py-10 px-4 sm:px-6 md:pl-12 md:pr-20"
                 )}
             >
-                <TextContent title={title}>
-                    {texts.map((text, index) => (
-                        <p key={index} className={"text-base sm:text-lg"}>
+                <TextContent title={item.title}>
+                    {item.texts.map((text, index) => (
+                        <span key={index} className={"text-base sm:text-lg"}>
                             {text}
-                        </p>
+                        </span>
                     ))}
                 </TextContent>
             </div>
@@ -44,7 +43,7 @@ export const Figure = (props: FigureProps) => {
                 )}
             >
                 <Image
-                    src={image}
+                    src={item.image}
                     alt="Пример"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

@@ -9,6 +9,7 @@ const Navigation = dynamic(() => import("widgets/navigation"));
 const ContactUs = dynamic(() => import("widgets/contact-us"));
 const Contacts = dynamic(() => import("widgets/contacts"));
 const Footer = dynamic(() => import("widgets/footer"));
+const Prices = dynamic(() => import("widgets/prices"));
 
 export const metadata: Metadata = {
     title: "Надежное покрытие будущего - сегодня",
@@ -73,6 +74,7 @@ export default function RootLayout({
             <body>
                 <Navigation />
                 {children}
+                <Prices />
                 <ContactUs />
                 <Contacts />
                 <YandexMapSimple />

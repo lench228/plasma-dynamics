@@ -1,10 +1,6 @@
-export interface iAdvantage {
-    image: string;
-    title: string;
-    texts: string[];
-}
+import { iImageSection } from "shared/types/section";
 
-export const ADVANTAGES: iAdvantage[] = [
+export const ADVANTAGES: iImageSection[] = [
     {
         image: "/advantages/1.webp",
         title: "Гибкость",
