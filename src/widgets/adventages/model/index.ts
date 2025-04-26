@@ -1,1 +1,1 @@
-export { ADVANTAGES, type iAdvantage } from "./advantages";
+export { ADVANTAGES } from "./advantages";
