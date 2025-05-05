@@ -12,18 +12,20 @@ export const LINKS: iNavLink[] = [
         label: "Способы нанесения",
         path: "/methods",
         links: [
-            { label: "Плазменное напыление", path: "/methods/1" },
-            { label: "Высокоскоростное газопламенное напыление", path: "/methods/2" },
+            { label: "Flame Spray & Arc-Wire", path: "/methods/flame" },
+            { label: "HVOF", path: "/methods/hvof" },
+            { label: "Plasma Spray", path: "/methods/plasma" },
+            { label: " Spray & Fuse", path: "/methods/spraynfuse" },
         ],
     },
     {
         label: "Напыляемые покрытия",
-        path: "/types",
+        path: "/coverages",
         links: [
-            { label: "Flame Spray & Arc-Wire", path: "/types/flame" },
-            { label: "HVOF", path: "/types/hvof" },
-            { label: "Plasma Spray", path: "/types/plasma" },
-            { label: " Spray & Fuse", path: "/types/spraynfuse" },
+            {
+                label: "Износостойкое покрытие",
+                path: "/coverages/wear-resistant",
+            },
         ],
     },
     {

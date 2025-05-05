@@ -1,1 +1,1 @@
-export {} from "./ui/advantages-bullet";
+export { Bullet, type BulletProps } from "./ui/bullet";

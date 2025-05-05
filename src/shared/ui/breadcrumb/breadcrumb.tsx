@@ -72,6 +72,8 @@ const pathTranslations: Record<string, string> = {
     types: "Типы покрытий",
     flame: "Пламенное напыление",
     plasma: "Плазменное напыление",
+    coverages: "Напыляемые покрытия",
+    "wear-resistant": "Износостойкое покрытие",
 };
 
 export default function Breadcrumbs() {

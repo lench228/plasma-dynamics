@@ -1,13 +1,12 @@
 import React from "react";
 
-interface AdvantagesBulletProps {
+export interface BulletProps {
     title: string;
     description: string;
-
     bullets: string[];
 }
 
-export const AdvantagesBullet = (props: AdvantagesBulletProps) => {
+export const Bullet = (props: BulletProps) => {
     const { title, description, bullets } = { ...props };
     return (
         <section className={"flex flex-col gap-6 regular-text"}>

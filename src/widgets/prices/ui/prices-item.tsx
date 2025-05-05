@@ -21,11 +21,12 @@ export const PricesItem = (props: PricesItemProps) => {
             ))}
 
             <Image
-                className={"absolute bottom-0 left-1/4 z-0"}
+                className={"absolute bottom-0 right-[-10px] z-0"}
                 src={item.image}
                 alt={"decor"}
                 width={222}
                 height={231}
+                style={{ height: "auto", width: "auto" }}
             ></Image>
 
             <span className={"mt-auto"}>[{index}]</span>

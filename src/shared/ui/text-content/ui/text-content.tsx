@@ -1,6 +1,6 @@
 import React from "react";
 
-interface TextContentProps {
+export interface TextContentProps {
     title: string;
     children: React.ReactNode;
     className?: string;

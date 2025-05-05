@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 import clsx from "clsx";
-import { TextContent } from "widgets/text-content";
+import { TextContent } from "shared/ui/text-content";
 import { iImageSection } from "shared/types/section";
 
-interface FigureProps {
+export interface FigureProps {
     item: iImageSection;
     variant: "hero" | "types";
     reversed: boolean;

@@ -47,7 +47,11 @@
         height: 20% !important;
     }
 
-
+    .bg-wear-resistant{
+        background: url("/coverages/wear-resistant/hero.webp") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
     /* Главные заголовки */
     .display-text {
         @apply text-7xl/[63px] font-extrabold;
