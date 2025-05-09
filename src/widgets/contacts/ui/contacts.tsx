@@ -5,9 +5,13 @@ import { CONTACTS } from "widgets/contacts/model";
 
 export default function Contacts() {
     return (
-        <section className={"p-20"}>
+        <section className={"sm:p-20 py-10"}>
             <h2 className={"header-1 mb-20"}>Наши контакты</h2>
-            <ul className={"flex  items-center justify-between gap-4"}>
+            <ul
+                className={
+                    "flex sm:flex-row flex-col  items-center justify-between sm:gap-4 gap-10"
+                }
+            >
                 {CONTACTS.map((item) => (
                     <Contact key={item.label} label={item.label} value={item.value} />
                 ))}

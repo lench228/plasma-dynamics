@@ -16,10 +16,10 @@ export default async function Page({ params }: { params: { coverage: "wear-resis
         <>
             <Hero title={data.hero.h1} bg={"wear-resistant"} />
 
-            <main className={"px-15 flex flex-col gap-12"}>
+            <main className={"sm:px-15 flex flex-col gap-12"}>
                 <Breadcrumbs />
-                <div className={"grid grid-cols-3 my-10"}>
-                    <TextContent title={data.hero.h1} className={"col-span-2"}>
+                <div className={"sm:grid sm:grid-cols-3 my-10"}>
+                    <TextContent title={data.hero.h1} className={"sm:col-span-2"}>
                         {data.hero.texts}
                     </TextContent>
                     <PageNav link={LINKS.filter((item) => item.path === "/coverages")[0]} />

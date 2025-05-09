@@ -10,7 +10,7 @@ interface TypesNavProps {
 export const PageNav = (props: TypesNavProps) => {
     const { link } = { ...props };
     return (
-        <nav className={"flex flex-col gap-2 px-16 py-8"}>
+        <nav className={"flex-col gap-2 px-16 py-8 hidden sm:flex"}>
             <h4 className={"text-2xl text-white py-4 px-3 text-center w-full  bg-main rounded-xl"}>
                 {link.label}
             </h4>

@@ -7,7 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 
 export function Breadcrumb({ children }: { children: React.ReactNode }) {
-    return <nav className="container p-10 border-b-2 border-separators">{children}</nav>;
+    return <nav className="container py-6 sm:p-10 border-b-2 border-separators">{children}</nav>;
 }
 
 export function BreadcrumbList({ children }: { children: React.ReactNode }) {
@@ -81,10 +81,6 @@ export default function Breadcrumbs() {
     return (
         <Breadcrumb>
             <BreadcrumbList>
-                <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Главная</BreadcrumbLink>
-                </BreadcrumbItem>
-
                 {segments.map((segment, index) => {
                     const isLast = index === segments.length - 1;
                     const href = `/${segments.slice(0, index + 1).join("/")}`;

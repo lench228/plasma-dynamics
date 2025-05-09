@@ -16,10 +16,10 @@ export default async function Page({ params }: { params: { method: "plasma" | "h
         <>
             <Hero title={data.hero.h1} bg={"hvof"} />
 
-            <main className={"px-15 "}>
+            <main className={"sm:px-15"}>
                 <Breadcrumbs />
                 <div className={"grid grid-cols-3 my-10"}>
-                    <TextContent className={"col-span-2"} title={data.hero.h2}>
+                    <TextContent className={"sm:col-span-2 col-span-3"} title={data.hero.h2}>
                         {data.hero.description}
                     </TextContent>
                     <PageNav link={LINKS.filter((item) => item.path === "/methods")[0]} />

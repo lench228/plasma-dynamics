@@ -47,6 +47,10 @@
         height: 20% !important;
     }
 
+    .bg-black{
+        background-color: var(--color-main);
+    }
+
     .bg-wear-resistant{
         background: url("/coverages/wear-resistant/hero.webp") no-repeat center;
         background-size: cover;
@@ -54,7 +58,7 @@
     }
     /* Главные заголовки */
     .display-text {
-        @apply text-7xl/[63px] font-extrabold;
+        @apply sm:text-7xl/[63px] text-5xl/[60px] font-extrabold;
     }
     .display-number {
         @apply text-8xl/[115px] font-semibold;
@@ -62,10 +66,10 @@
 
     /* Заголовки */
     .header-1 {
-        @apply text-[64px]/[76px] font-bold;
+        @apply sm:text-[64px]/[76px] text-5xl/[60px] font-bold;
     }
     .header-2 {
-        @apply text-[52px]/[60px] font-bold;
+        @apply sm:text-[52px]/[60px] text-[40px]/[50px] font-bold;
     }
     .header-3 {
         @apply text-[48px]/[63px] font-bold;
@@ -76,7 +80,7 @@
 
     /* Основной */
     .big-text {
-        @apply text-2xl/[36px] font-medium;
+        @apply sm:text-2xl/[36px] text-xl/[30px] font-medium;
     }
 
 

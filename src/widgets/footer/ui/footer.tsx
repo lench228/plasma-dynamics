@@ -7,10 +7,11 @@ export default function Footer() {
     return (
         <footer
             className={
-                "grid grid-rows-2 grid-cols-4 px-10 py-12 bg-main text-separators  regular-text gap-10 items-start"
+                "flex flex-col  bg-main text-separators p-4 regular-text gap-10 items-start " +
+                "sm:grid sm:grid-rows-2 sm:grid-cols-4 sm:px-10 sm:py-12"
             }
         >
-            <div className={"w-full col-span-2"}>
+            <div className={"w-full sm:col-span-2"}>
                 <Image
                     src={"/footer/fond.webp"}
                     alt={"Фонд содействия инновациям"}
@@ -18,16 +19,16 @@ export default function Footer() {
                     height={56}
                 />
                 <p className={"small-text w-1/2 text-pretty mt-6"}>
-                    Проект создан в рамках федерального проекта «Платформа университетского
+                    Проект создан в рамках федерального проекта «Платформа университетского
                     технологического предпринимательства»
                 </p>
             </div>
             {FOOTER_ITEMS.map((item) => (
                 <FooterLinks items={item.items} key={item.title} title={item.title} />
             ))}
-            <div className={" w-full  col-span-4"}>
+            <div className={"w-full sm:col-span-4"}>
                 <span className={"display-text"}>Plasma Dynamics</span>
-                <p className={"small-text w-1/7"}>
+                <p className={"small-text w-full sm:w-1/7"}>
                     Товарный знак © 2024 Plasma Dynamics Авторское право сохранено.
                 </p>
             </div>

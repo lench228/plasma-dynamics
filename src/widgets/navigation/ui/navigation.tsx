@@ -20,11 +20,12 @@ export default function Navigation() {
                     alt={"Plasma Dynamics"}
                     width={336}
                     height={40}
+                    className={"w-3/4 sm:w-full"}
                 ></Image>
             </Link>
 
             <LayoutGroup id={"underline"}>
-                <ul className={"flex gap-8 items-center"}>
+                <ul className={" gap-8 items-center sm:flex hidden"}>
                     {LINKS.map((link, index) => (
                         <li key={index}>
                             <NavLink

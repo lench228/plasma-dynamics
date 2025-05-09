@@ -6,13 +6,18 @@ import { MotionBg } from "widgets/services/ui/motion-bg";
 export const Services = () => {
     return (
         <>
-            <section className={"flex items-center flex-col relative z-3"}>
+            <section className={"flex items-center flex-col sm:relative sm:z-3 "}>
                 <h2 className={"header-2 my-20"}>Наши услуги</h2>
-                <ul className={"flex  items-center gap-4"}>
+                <ul
+                    className={
+                        "w-full flex sm:flex-row flex-col items-center gap-4 sm:bg-transparent bg-black"
+                    }
+                >
                     {CARDS.map((item) => (
                         <ServiceCard key={item.title} item={item}></ServiceCard>
                     ))}
                 </ul>
+
                 <MotionBg />
             </section>
         </>

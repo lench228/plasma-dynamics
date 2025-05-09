@@ -1,11 +1,11 @@
 import React from "react";
 import { ADVANTAGES } from "widgets/adventages/model";
-import { Figure } from "widgets/figure";
+import { Figure } from "shared/ui";
 
 export const Advantages = () => {
     return (
         <section>
-            <ul>
+            <ul className={"flex flex-col gap-4 sm:block"}>
                 {ADVANTAGES.map((advantage, index) => (
                     <Figure
                         item={{

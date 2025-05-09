@@ -5,8 +5,8 @@ import { SlideInImage } from "widgets/slide-in/ui/slide-in-image";
 export const SlideIn = () => {
     return (
         <section className={"grid grid-cols-3  justify-end min-h-[393px]"}>
-            <aside className={"text-main p-20 pt-10 col-span-2"}>
-                <h2 className={"header-3 mb-8"}>
+            <aside className={"text-main sm:p-20 px-4 pt-10 col-span-3 sm:col-span-2"}>
+                <h2 className={"header-2 mb-8"}>
                     Мы фокусируемся на <br />
                     <span className={"text-accent"}>качестве и гибкости</span>
                 </h2>

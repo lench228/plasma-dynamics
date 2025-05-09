@@ -15,7 +15,7 @@ export const LINKS: iNavLink[] = [
             { label: "Flame Spray & Arc-Wire", path: "/methods/flame" },
             { label: "HVOF", path: "/methods/hvof" },
             { label: "Plasma Spray", path: "/methods/plasma" },
-            { label: " Spray & Fuse", path: "/methods/spraynfuse" },
+            { label: "Spray & Fuse", path: "/methods/spraynfuse" },
         ],
     },
     {

@@ -13,7 +13,7 @@ export const Input = (props: InputProps) => {
     return (
         <div
             className={clsx(
-                "flex flex-col max-w-[344px] gap-2",
+                "flex flex-col sm:w-[344px] sm:px-0 gap-2 w-full px-10",
                 isTextarea && "row-span-3 h-full w-full"
             )}
             key={label}

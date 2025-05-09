@@ -12,7 +12,7 @@ export const Bullet = (props: BulletProps) => {
         <section className={"flex flex-col gap-6 regular-text"}>
             <h2 className={"header-2"}>{title}</h2>
             <p>{description}</p>
-            <ul className={"mx-20 flex flex-col gap-4"}>
+            <ul className={"sm:mx-20 mx-4 flex flex-col gap-4"}>
                 {bullets.map((bullet, i) => (
                     <li key={i} className={"flex w-full items-center"}>
                         <svg

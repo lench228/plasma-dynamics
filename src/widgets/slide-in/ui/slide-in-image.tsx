@@ -22,22 +22,24 @@ const imageVariants: Variants = {
 
 export const SlideInImage = () => {
     return (
-        <AnimatePresence>
-            <motion.div
-                className="overflow-x-hidden"
-                whileInView={"onscreen"}
-                variants={imageVariants}
-                initial="offscreen"
-                exit="exit"
-            >
-                <Image
-                    src="/hero/slide-in.webp"
-                    width={595}
-                    height={393}
-                    alt="Деталь"
-                    className="object-contain ml-auto"
-                />
-            </motion.div>
-        </AnimatePresence>
+        <div className={"sm:block hidden"}>
+            <AnimatePresence>
+                <motion.div
+                    className="overflow-x-hidden"
+                    whileInView={"onscreen"}
+                    variants={imageVariants}
+                    initial="offscreen"
+                    exit="exit"
+                >
+                    <Image
+                        src="/hero/slide-in.webp"
+                        width={595}
+                        height={393}
+                        alt="Деталь"
+                        className="object-contain ml-auto"
+                    />
+                </motion.div>
+            </AnimatePresence>
+        </div>
     );
 };

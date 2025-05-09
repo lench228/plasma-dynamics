@@ -17,20 +17,15 @@ export const Figure = (props: FigureProps) => {
     return (
         <li
             className={clsx(
-                `grid  items-center grid-cols-1 `,
-                "grid-cols-1 md:grid-cols-2 ",
-                variant === "types" ? "gap-40 mx-[-60px]" : "max-h-[623px]"
+                `grid  items-center grid-cols-1 gap-4`,
+                " md:grid-cols-2  sm:gap-0",
+                variant === "types" ? "sm:gap-40 sm:mx-[-60px]" : "sm:max-h-[623px]"
             )}
         >
-            <div
-                className={clsx(
-                    reversed ? "md:order-2" : "md:order-1",
-                    "py-6 md:py-10 px-4 sm:px-6 md:pl-12 md:pr-20"
-                )}
-            >
+            <div className={clsx(reversed ? "md:order-2" : "md:order-1", "")}>
                 <TextContent title={item.title}>
                     {item.texts.map((text, index) => (
-                        <span key={index} className={"text-base sm:text-lg"}>
+                        <span key={index} className={"text-base"}>
                             {text}
                         </span>
                     ))}
@@ -39,17 +34,10 @@ export const Figure = (props: FigureProps) => {
             <div
                 className={clsx(
                     reversed ? "md:order-1" : "md:order-2",
-                    "relative w-full aspect-[4/3] md:aspect-auto h-[623px]"
+                    "relative w-full sm:aspect-[4/3] md:aspect-auto h-[500px]"
                 )}
             >
-                <Image
-                    src={item.image}
-                    alt="Пример"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    priority={false}
-                />
+                <Image src={item.image} alt="Пример" priority={false} fill />
             </div>
         </li>
     );

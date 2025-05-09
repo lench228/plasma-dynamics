@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <body>
+            <body className={"w-screen"}>
                 <Navigation />
                 {children}
                 <Prices />

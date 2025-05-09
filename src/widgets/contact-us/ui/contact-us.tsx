@@ -12,7 +12,9 @@ export default function ContactUs() {
                     alt={"Пуля"}
                     width={554}
                     height={598}
+                    className={"hidden sm:block"}
                 ></Image>
+
                 <Form />
             </main>
         </section>
