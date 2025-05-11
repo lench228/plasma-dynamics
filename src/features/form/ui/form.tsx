@@ -11,7 +11,7 @@ export const Form = () => {
     return (
         <form
             className={
-                "gap-6  w-full h-full  grid sm:p-0 sm:grid-rows-3 sm:grid-cols-2 sm:max-w-[728px] sm:gap-0 grid-cols-1 items-center justify-center justify-items-center p-5 "
+                "gap-6  w-full h-full  grid sm:grid-rows-3 sm:grid-cols-2 sm:max-w-[728px] sm:gap-0 grid-cols-1 items-center justify-center justify-items-center sm:p-5 "
             }
         >
             {FORM_DATA.map((input, index) => (

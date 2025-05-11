@@ -43,7 +43,7 @@ export default function Navigation() {
             </svg>
 
             <LayoutGroup id={"underline"}>
-                <ul className={" gap-8 items-center sm:flex hidden"}>
+                <ul className={"gap-6 items-center sm:flex hidden"}>
                     {LINKS.map((link, index) => (
                         <li key={index}>
                             <NavLink

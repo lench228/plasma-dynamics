@@ -34,7 +34,7 @@ export const Input = (props: InputProps) => {
             ) : (
                 <textarea
                     tabIndex={5}
-                    className={"bg-background-cards h-full w-full p-4 rounded-xl"}
+                    className={"bg-background-cards h-full w-full p-4  rounded-xl"}
                     placeholder={placeholder}
                     onChange={(e) => validate(e.target.value)}
                 />
