@@ -9,12 +9,9 @@ import { Figure } from "shared/ui/figure";
 import { Bullet } from "widgets/advantages-bullet/ui/bullet";
 
 import { COVERAGES } from "../model";
+import { TCoverage } from "../types";
 
-export default async function Page({
-    params,
-}: {
-    params: Promise<{ coverage: "wear-resistant" }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ coverage: TCoverage }> }) {
     // params- последний сегмент из slug url, дает возможность понять на какой мы подстранице
     const { coverage } = await params;
 

@@ -10,7 +10,6 @@ import { METHODS } from "../model";
 import { TMethod } from "../types";
 
 export default async function Page({ params }: { params: Promise<{ method: TMethod }> }) {
-    console.log(params);
     const { method } = await params;
 
     const data = METHODS[method];

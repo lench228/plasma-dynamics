@@ -8,9 +8,12 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { LINKS } from "widgets/navigation/model";
 import { NavLink } from "shared/ui";
+import { MobileSidebar } from "widgets/mobile-sidebar";
 
 export default function Navigation() {
     const curPath = usePathname().split("/")[1];
+
+    const [toggle, setToggle] = React.useState(false);
 
     return (
         <nav className="bg-main flex justify-between p-4 mt-auto sticky top-0 z-50">
@@ -25,6 +28,8 @@ export default function Navigation() {
             </Link>
 
             <svg
+                onClick={() => setToggle(true)}
+                className={"sm:hidden block"}
                 width="40"
                 height="40"
                 viewBox="0 0 40 40"
@@ -52,6 +57,8 @@ export default function Navigation() {
                     ))}
                 </ul>
             </LayoutGroup>
+
+            {toggle && <MobileSidebar toggleState={setToggle} />}
         </nav>
     );
 }

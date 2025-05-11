@@ -1,8 +1,8 @@
 import { iImageSection } from "shared/types/section";
 import { BulletProps } from "widgets/advantages-bullet";
 
-export interface iMethod {
-    [key: string]: {
+export type iMethod = {
+    [key in TMethod]: {
         hero: {
             h1: string;
             h2: string;
@@ -11,7 +11,7 @@ export interface iMethod {
         sections: iImageSection[];
         bulletSection: BulletProps;
     };
-}
+};
 
 // Фактически роуты
-export type TMethod = "plasma" | "hvof" | "exmp3" | "exmp4";
+export type TMethod = "plasma";
