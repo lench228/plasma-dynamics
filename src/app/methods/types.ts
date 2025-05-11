@@ -14,4 +14,4 @@ export type iMethod = {
 };
 
 // Фактически роуты
-export type TMethod = "plasma";
+export type TMethod = "plasma" | "hvof";
