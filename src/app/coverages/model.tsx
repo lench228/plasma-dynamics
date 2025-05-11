@@ -1,20 +1,6 @@
-import { BulletProps } from "widgets/advantages-bullet";
-import { TextContentProps } from "shared/ui/text-content";
-import { FigureProps } from "shared/ui";
-
-export interface iCoverages {
-    [key: string]: {
-        hero: {
-            image: string;
-            h1: string;
-            texts: React.ReactNode;
-        };
-        bulletSection: BulletProps;
-        promoText: TextContentProps;
-        figures: FigureProps[];
-        footerText: TextContentProps;
-    };
-}
+import { iCoverages } from "./types";
+// Сюда можно дописать объект, который соответствует интерфейсу iCoverages
+// Чтобы добавит тип, нужно добавить в TCoverages в types.ts строку с названием роута
 
 export const COVERAGES: iCoverages = {
     "wear-resistant": {

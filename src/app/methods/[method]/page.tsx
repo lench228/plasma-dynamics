@@ -6,12 +6,14 @@ import { LINKS } from "widgets/navigation";
 import { Figure } from "shared/ui/figure";
 import { Bullet } from "widgets/advantages-bullet/ui/bullet";
 
-import { TYPES } from "../model";
+import { METHODS } from "../model";
+import { TMethod } from "../types";
 
-export default async function Page({ params }: { params: { method: "plasma" | "hvof" } }) {
-    const [param] = await Promise.all([params]);
+export default async function Page({ params }: { params: Promise<{ method: TMethod }> }) {
+    console.log(params);
+    const { method } = await params;
 
-    const data = TYPES[param.method];
+    const data = METHODS[method];
     return (
         <>
             <Hero title={data.hero.h1} bg={"hvof"} />

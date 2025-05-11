@@ -15,7 +15,9 @@ export const Hero = (props: HeroProps) => {
             className={clsx(
                 `w-full text-white  sm:pl-20 sm:pr-80 `,
                 "bg-" + bg,
-                bg === "hero" ? "min-h-[80vh] sm:pt-63 pt-10 px-4" : "min-h-[20vh] pt-20"
+                bg === "hero"
+                    ? "min-h-[40vh] sm:min-h-[80vh] sm:pt-63 pt-10 px-4"
+                    : "min-h-[20vh] pt-20"
             )}
         >
             <div className={`bg-main/50 sm:p-10 flex flex-col gap-4 sm:gap-10`}>

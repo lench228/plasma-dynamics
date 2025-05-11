@@ -2,16 +2,24 @@ import { Hero } from "widgets/hero";
 import Breadcrumbs from "shared/ui/breadcrumb";
 import { TextContent } from "shared/ui/text-content";
 import { PageNav } from "shared/ui/page-nav/ui/page-nav";
+
+// В LINKS роуты для навигации, при добавлении страницы, нужно добавить туда link
 import { LINKS } from "widgets/navigation";
 import { Figure } from "shared/ui/figure";
 import { Bullet } from "widgets/advantages-bullet/ui/bullet";
 
 import { COVERAGES } from "../model";
 
-export default async function Page({ params }: { params: { coverage: "wear-resistant" } }) {
-    const [param] = await Promise.all([params]);
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ coverage: "wear-resistant" }>;
+}) {
+    // params- последний сегмент из slug url, дает возможность понять на какой мы подстранице
+    const { coverage } = await params;
 
-    const data = COVERAGES[param.coverage];
+    // Выбираем данные нужной страницы для заполнения из константы
+    const data = COVERAGES[coverage];
     return (
         <>
             <Hero title={data.hero.h1} bg={"wear-resistant"} />

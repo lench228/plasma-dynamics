@@ -1,19 +1,6 @@
-import { iImageSection } from "shared/types/section";
-import { BulletProps } from "widgets/advantages-bullet";
+import { iMethod } from "./types";
 
-export interface iType {
-    [key: string]: {
-        hero: {
-            h1: string;
-            h2: string;
-            description: string;
-        };
-        sections: iImageSection[];
-        bulletSection: BulletProps;
-    };
-}
-
-export const TYPES: iType = {
+export const METHODS: iMethod = {
     hvof: {
         hero: {
             h1: "High Velocity Oxygen Fuel (HVOF) Coating",

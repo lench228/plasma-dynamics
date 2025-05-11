@@ -10,7 +10,7 @@ export const Services = () => {
                 <h2 className={"header-2 my-20"}>Наши услуги</h2>
                 <ul
                     className={
-                        "w-full flex sm:flex-row flex-col items-center gap-4 sm:bg-transparent bg-black"
+                        "w-full sm:justify-center flex sm:flex-row flex-col items-center gap-4 sm:bg-transparent bg-black"
                     }
                 >
                     {CARDS.map((item) => (
