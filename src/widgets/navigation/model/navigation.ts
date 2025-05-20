@@ -30,10 +30,19 @@ export const LINKS: iNavLink[] = [
     },
     {
         label: "Области применения",
-        path: "/env",
+        path: "/applications",
         links: [
-            { label: "Пример 1 ", path: "/env/1" },
-            { label: "Пример 2", path: "/env/2" },
+            { label: "Авиапромышленность", path: "/applications/avia" },
+            { label: "Системы перекачки", path: "/applications/pumping" },
+            { label: "Промышленное оборудование", path: "/applications/industrial" },
+            { label: "Военные и оборонные применения", path: "/applications/defense" },
+            { label: "Нефтегазовая промышленность", path: "/applications/oilgas" },
+            {
+                label: "Пластмассовая и перерабатывающая промышленность",
+                path: "/applications/plastics",
+            },
+            { label: "Энергетика", path: "/applications/energy" },
+            { label: "Целлюлозно-бумажная промышленность ", path: "/applications/paper" },
         ],
     },
     {

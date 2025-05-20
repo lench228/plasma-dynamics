@@ -1,5 +1,5 @@
 import { iCoverages } from "./types";
-// Сюда можно дописать объект, который соответствует интерфейсу iCoverages
+// Сюда можно дописать объект, который соответствует интерфейсу iApplications
 // Чтобы добавит тип, нужно добавить в TCoverages в types.ts строку с названием роута
 
 export const COVERAGES: iCoverages = {

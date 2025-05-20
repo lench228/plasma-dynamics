@@ -30,7 +30,7 @@ export function BreadcrumbLink({
     return (
         <Link
             href={href}
-            className={clsx("big-text text-[#3A3A3A] font-medium hover:underline", className)}
+            className={clsx("regular-text text-[#3A3A3A] font-medium hover:underline", className)}
         >
             {children}
         </Link>

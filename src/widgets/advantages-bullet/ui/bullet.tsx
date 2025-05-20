@@ -1,16 +1,18 @@
 import React from "react";
+import clsx from "clsx";
 
 export interface BulletProps {
     title: string;
-    description: string;
+    description?: string;
     bullets: string[];
+    isUnderline?: boolean;
 }
 
 export const Bullet = (props: BulletProps) => {
-    const { title, description, bullets } = { ...props };
+    const { title, description, bullets, isUnderline } = { ...props };
     return (
         <section className={"flex flex-col gap-6 regular-text"}>
-            <h2 className={"header-2"}>{title}</h2>
+            <h2 className={clsx("header-4", isUnderline && "header-underline")}>{title}</h2>
             <p>{description}</p>
             <ul className={"sm:mx-20 mx-4 flex flex-col gap-4"}>
                 {bullets.map((bullet, i) => (

@@ -47,18 +47,62 @@
         height: 20% !important;
     }
 
-
     .bg-wear-resistant{
         background: url("/coverages/wear-resistant/hero.webp") no-repeat center;
         background-size: cover;
         height: 20% !important;
     }
+    .bg-avia{
+        background: url("/applications/avia.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+    .bg-pumping{
+        background: url("/applications/pumping.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+
+    .bg-industrial{
+        background: url("/applications/industrial.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+    .bg-defense{
+        background: url("/applications/defense.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+    .bg-oilgas{
+        background: url("/applications/oilgas.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+    .bg-plastics{
+        background: url("/applications/plastics.png") no-repeat center;
+        background-size: cover;
+        height: 20% !important;
+    }
+    .bg-energy{
+             background: url("/applications/energy.png") no-repeat center;
+             background-size: cover;
+             height: 20% !important;
+     }
+    .bg-paper{
+             background: url("/applications/paper.png") no-repeat center;
+             background-size: cover;
+             height: 20% !important;
+     }
     /* Главные заголовки */
     .display-text {
         @apply sm:text-7xl/[63px] text-5xl/[60px] font-extrabold;
     }
     .display-number {
         @apply text-8xl/[115px] font-semibold;
+    }
+
+    .header-underline{
+        @apply border-b-2 border-separators pb-2;
     }
 
     /* Заголовки */
