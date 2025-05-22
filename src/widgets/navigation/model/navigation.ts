@@ -38,7 +38,7 @@ export const LINKS: iNavLink[] = [
             { label: "Военные и оборонные применения", path: "/applications/defense" },
             { label: "Нефтегазовая промышленность", path: "/applications/oilgas" },
             {
-                label: "Пластмассовая и перерабатывающая промышленность",
+                label: "Перерабатывающая промышленность",
                 path: "/applications/plastics",
             },
             { label: "Энергетика", path: "/applications/energy" },

@@ -10,7 +10,8 @@ export const FORM_DATA: iFormData[] = [
         placeholder: "Иван",
     },
     {
-        placeholder: "Ваш вопрос",
+        label: "Ваш вопрос",
+        placeholder: "Сколько будет стоить...",
         isTextarea: true,
     },
     {

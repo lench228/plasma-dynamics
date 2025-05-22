@@ -37,11 +37,11 @@ export const NavLinkList = React.forwardRef<HTMLDivElement, NavLinkListProps>(
                             },
                         }}
                     >
-                        <motion.ul className="bg-white w-full min-w-[200px] shadow-lg">
+                        <motion.ul className="bg-white  w-[180px] shadow-lg">
                             {links?.map((item, index) => (
                                 <motion.li
                                     key={item.label}
-                                    className="py-2 text-main hover:text-accent transition-colors"
+                                    className="py-2 text-main hover:text-accent transition-colors  overflow-hidden text-ellipsis   whitespace-nowrap"
                                     initial={{ x: -20, opacity: 0 }}
                                     animate={{
                                         x: 0,
@@ -52,7 +52,7 @@ export const NavLinkList = React.forwardRef<HTMLDivElement, NavLinkListProps>(
                                         },
                                     }}
                                 >
-                                    <Link className={"w-full py-4 pl-4 h-full"} href={item.path}>
+                                    <Link className={"py-4 pl-4 h-full "} href={item.path}>
                                         {item.label}
                                     </Link>
                                 </motion.li>
