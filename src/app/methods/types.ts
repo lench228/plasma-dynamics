@@ -10,8 +10,15 @@ export type iMethod = {
         };
         sections: iImageSection[];
         bulletSection: BulletProps;
+        coverageSection: BulletProps;
+        videoSection: {
+            video: string;
+            title: string;
+            poster: string;
+        };
     };
 };
 
 // Фактически роуты
-export type TMethod = "plasma" | "hvof" | "flame" | "spraynfuse";
+export type TMethod = "hvoaf" | "plasma";
+// | "plasma" | "flame" | "spraynfuse";

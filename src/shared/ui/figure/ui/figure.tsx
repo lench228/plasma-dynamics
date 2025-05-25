@@ -24,11 +24,7 @@ export const Figure = (props: FigureProps) => {
         >
             <div className={clsx(reversed ? "md:order-2" : "md:order-1", "")}>
                 <TextContent title={item.title}>
-                    {item.texts.map((text, index) => (
-                        <span key={index} className={"text-base"}>
-                            {text}
-                        </span>
-                    ))}
+                    <span className={"text-base"}>{item.texts}</span>
                 </TextContent>
             </div>
             <div

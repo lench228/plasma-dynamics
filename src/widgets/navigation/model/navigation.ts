@@ -13,8 +13,8 @@ export const LINKS: iNavLink[] = [
         path: "/methods",
         links: [
             { label: "Flame Spray & Arc-Wire", path: "/methods/flame" },
-            { label: "HVOF", path: "/methods/hvof" },
-            { label: "Plasma Spray", path: "/methods/plasma" },
+            { label: "HVOAF", path: "/methods/hvoaf" },
+            { label: "APS", path: "/methods/plasma" },
             { label: "Spray & Fuse", path: "/methods/spraynfuse" },
         ],
     },
@@ -42,7 +42,7 @@ export const LINKS: iNavLink[] = [
                 path: "/applications/plastics",
             },
             { label: "Энергетика", path: "/applications/energy" },
-            { label: "Целлюлозно-бумажная промышленность ", path: "/applications/paper" },
+            { label: "Целлюлозно-бумажная промышленность", path: "/applications/paper" },
         ],
     },
     {

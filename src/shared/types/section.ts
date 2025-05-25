@@ -1,5 +1,5 @@
 export interface iImageSection {
     image: string;
     title: string;
-    texts: string[];
+    texts: React.ReactNode;
 }

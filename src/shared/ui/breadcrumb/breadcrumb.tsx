@@ -59,7 +59,9 @@ export function BreadcrumbPage({
     className?: string;
 }) {
     return (
-        <span className={clsx("big-text font-medium text-accent underline", className)}>
+        <span
+            className={clsx("big-text font-medium text-accent underline text-ellipsis", className)}
+        >
             {children}
         </span>
     );
@@ -74,6 +76,15 @@ const pathTranslations: Record<string, string> = {
     plasma: "Плазменное напыление",
     coverages: "Напыляемые покрытия",
     "wear-resistant": "Износостойкое покрытие",
+    hvoaf: "HVOАF",
+    avia: "Авиапромышленность",
+    pumping: "Системы перекачки",
+    industrial: "Промышленное оборудование",
+    defense: "Военные и оборонные применения",
+    oilgas: "Нефтегазовая промышленность",
+    plastics: "Перерабатывающая промышленность",
+    energy: "Энергетика",
+    paper: "Целлюлозно-бумажная промышленность",
 };
 
 export default function Breadcrumbs() {
@@ -81,32 +92,19 @@ export default function Breadcrumbs() {
     return (
         <Breadcrumb>
             <BreadcrumbList>
-                {segments.map((segment, index) => {
-                    const isLast = index === segments.length - 1;
-                    const href = `/${segments.slice(0, index + 1).join("/")}`;
-                    const translatedSegment = pathTranslations[segment] || segment;
-
-                    return (
-                        <React.Fragment key={href}>
-                            {isLast ? (
-                                <BreadcrumbItem>
-                                    <BreadcrumbPage className="capitalize">
-                                        {translatedSegment}
-                                    </BreadcrumbPage>
-                                </BreadcrumbItem>
-                            ) : (
-                                <>
-                                    <BreadcrumbItem>
-                                        <BreadcrumbLink href={href} className="capitalize">
-                                            {translatedSegment}
-                                        </BreadcrumbLink>
-                                    </BreadcrumbItem>
-                                    <BreadcrumbSeparator />
-                                </>
-                            )}
-                        </React.Fragment>
-                    );
-                })}
+                <BreadcrumbItem>
+                    <BreadcrumbLink href={"/"} className="capitalize">
+                        Главная
+                    </BreadcrumbLink>
+                    <BreadcrumbSeparator />
+                </BreadcrumbItem>
+                <React.Fragment>
+                    <BreadcrumbItem>
+                        <BreadcrumbPage className="capitalize">
+                            {pathTranslations[segments[segments.length - 1]]}
+                        </BreadcrumbPage>
+                    </BreadcrumbItem>
+                </React.Fragment>
             </BreadcrumbList>
         </Breadcrumb>
     );
