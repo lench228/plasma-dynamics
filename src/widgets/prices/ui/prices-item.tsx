@@ -14,11 +14,9 @@ export const PricesItem = (props: PricesItemProps) => {
         <li className={"bg-main flex flex-col relative min-h-[450px] overflow-x-hidden px-6 py-8"}>
             <h4 className={"big-text mb-3"}>{item.title}</h4>
 
-            {item.texts.map((item, index) => (
-                <p className={"leading-6"} key={index}>
-                    {item}
-                </p>
-            ))}
+            <p className={"leading-6"} key={index}>
+                {item.texts}
+            </p>
 
             <Image
                 className={"absolute bottom-0 right-[-10px] z-0"}
