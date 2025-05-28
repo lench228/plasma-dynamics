@@ -20,5 +20,5 @@ export type iMethod = {
 };
 
 // Фактически роуты
-export type TMethod = "hvoaf" | "plasma" | "flame";
+export type TMethod = "hvoaf" | "plasma" | "flame" | "spraynfuse";
 // | "plasma" | "flame" | "spraynfuse";
