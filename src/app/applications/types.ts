@@ -33,7 +33,8 @@ export type TApplication =
     | "defense"
     | "oilgas"
     | "plastics"
-    | "energy";
+    | "energy"
+    | "paper";
 // | "industrial"
 // | "defense"
 // | "oilgas"
