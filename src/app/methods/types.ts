@@ -11,7 +11,7 @@ export type iMethod = {
         sections: iImageSection[];
         bulletSection: BulletProps;
         coverageSection: BulletProps;
-        videoSection: {
+        videoSection?: {
             video: string;
             title: string;
             poster: string;
@@ -20,5 +20,4 @@ export type iMethod = {
 };
 
 // Фактически роуты
-export type TMethod = "hvoaf" | "plasma" | "flame" | "spraynfuse";
-// | "plasma" | "flame" | "spraynfuse";
+export type TMethod = "hvoaf" | "plasma" | "flame" | "bronze";

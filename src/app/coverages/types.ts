@@ -7,24 +7,28 @@ export type iCoverages = {
     // После, добавить уже в файле model заполнить данными
     [key in TCoverage]: {
         // Hero секция
-        hero: {
+        hero?: {
             image: string;
             h1: string;
             texts: React.ReactNode;
         };
         // секция со списком
-        bulletSection: BulletProps;
+        bulletSection?: BulletProps;
         // Текст
-        promoText: TextContentProps;
+        promoText?: TextContentProps;
         // Секции с изображениями
-        figures: FigureProps[];
+        figures?: FigureProps[];
         // Нижний текст
-        footerText: TextContentProps;
+        footerText?: TextContentProps;
     };
 };
 
 // Фактически роуты
-export type TCoverage = "wear-resistant";
 
 // Типы отделяются |
-// export type TCoverage = "wear-resistant" | "exmp2" | "exmp3" | "exmp4";
+export type TCoverage =
+    | "wear-resistant"
+    | "thermal-barrier"
+    | "corrosion-protection"
+    | "rfi"
+    | "thermal-spray-coating";

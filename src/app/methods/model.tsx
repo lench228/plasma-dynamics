@@ -158,14 +158,9 @@ export const METHODS: iMethod = {
                 "Жаростойкие на основе NiCrAlYMe",
             ],
         },
-        videoSection: {
-            video: "/flame/video.mp4",
-            poster: "/flame/poster.png",
-            title: "Видео газопламенного напыления",
-        },
     },
 
-    spraynfuse: {
+    bronze: {
         hero: {
             h1: "Bronze Surfacing",
             h2: "Наплавка бронзы",
@@ -213,11 +208,6 @@ export const METHODS: iMethod = {
                 "Безоловянные бронзы / БрАЖ 9-4, БрАЖН 10-4-4",
                 "Алюминиевые бронзы / БрАЖ 10-1,5, БрАЖ 10-2",
             ],
-        },
-        videoSection: {
-            video: "/bronze/video.mp4",
-            poster: "/bronze/poster.png",
-            title: "Видео наплавки бронзы",
         },
     },
 };

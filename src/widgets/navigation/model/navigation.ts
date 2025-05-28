@@ -15,7 +15,7 @@ export const LINKS: iNavLink[] = [
             { label: "Flame Spray & Arc-Wire", path: "/methods/flame" },
             { label: "HVOAF", path: "/methods/hvoaf" },
             { label: "APS", path: "/methods/plasma" },
-            { label: "Bronze Surfacing", path: "/methods/spraynfuse" },
+            { label: "Bronze Surfacing", path: "/methods/bronze" },
         ],
     },
     {
@@ -25,6 +25,22 @@ export const LINKS: iNavLink[] = [
             {
                 label: "Износостойкое покрытие",
                 path: "/coverages/wear-resistant",
+            },
+            {
+                label: "Термобарьер",
+                path: "/coverages/thermal-barrier",
+            },
+            {
+                label: "Защита от коррозии",
+                path: "/coverages/corrosion-protection",
+            },
+            {
+                label: "MI/RFI экранирование",
+                path: "/coverages/rfi",
+            },
+            {
+                label: "Термонапыляемое покрытие",
+                path: "/coverages/thermal-spray-coating",
             },
         ],
     },

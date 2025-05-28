@@ -35,7 +35,8 @@ export default async function Page({ params }: { params: Promise<{ method: TMeth
                         reversed={false}
                     />
                 ))}
-                <Video {...data.videoSection} />
+                {data.videoSection && <Video {...data.videoSection} />}
+
                 <Bullet {...data.bulletSection} />
                 <Bullet {...data.coverageSection}></Bullet>
             </main>
