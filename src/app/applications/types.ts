@@ -26,7 +26,7 @@ export type iApplications = {
 };
 
 // Фактически роуты
-export type TApplication = "avia" | "pumping";
+export type TApplication = "avia" | "pumping" | "industrial";
 // | "industrial"
 // | "defense"
 // | "oilgas"
