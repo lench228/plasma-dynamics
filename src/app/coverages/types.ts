@@ -7,7 +7,7 @@ export type iCoverages = {
     // После, добавить уже в файле model заполнить данными
     [key in TCoverage]: {
         // Hero секция
-        hero?: {
+        hero: {
             image: string;
             h1: string;
             texts: React.ReactNode;
