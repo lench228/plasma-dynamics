@@ -13,13 +13,13 @@ export type iCoverages = {
             texts: React.ReactNode;
         };
         // секция со списком
-        bulletSection?: BulletProps;
+        bulletSection: BulletProps;
         // Текст
-        promoText?: TextContentProps;
+        promoText: TextContentProps;
         // Секции с изображениями
-        figures?: FigureProps[];
+        figures: FigureProps[];
         // Нижний текст
-        footerText?: TextContentProps;
+        footerText: TextContentProps;
     };
 };
 
