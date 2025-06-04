@@ -20,6 +20,6 @@ export const FORM_DATA: iFormData[] = [
     },
     {
         label: "Номер телефона",
-        placeholder: "+89969369931",
+        placeholder: "7***1238191",
     },
 ];

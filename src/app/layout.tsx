@@ -3,6 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 
 import dynamic from "next/dynamic";
+import { Examples } from "widgets/examples/ui/examples";
 
 const YandexMapSimple = dynamic(() => import("shared/lib/yamap"));
 const Navigation = dynamic(() => import("widgets/navigation"));
@@ -75,6 +76,7 @@ export default function RootLayout({
                 <Navigation />
                 {children}
                 <Prices />
+                <Examples />
                 <ContactUs />
                 <Contacts />
                 <YandexMapSimple />

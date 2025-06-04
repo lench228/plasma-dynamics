@@ -33,7 +33,7 @@ export const Figure = (props: FigureProps) => {
                     "relative w-full sm:aspect-[4/3] md:aspect-auto h-[500px]"
                 )}
             >
-                <Image src={item.image} alt="Пример" priority={false} fill />
+                <Image src={item.image} alt="Пример" priority={false} fill sizes={"100"} />
             </div>
         </li>
     );
