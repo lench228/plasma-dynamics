@@ -29,7 +29,7 @@ export const NavLink = (props: NavLinkProps) => {
         >
             <div className={clsx("group font-manrope small-text", "text-white  transition-colors")}>
                 <p className="flex items-center gap-2">
-                    {path ? <Link href={path}>{children}</Link> : children}
+                    {path[0] === "#" ? <Link href={path}>{children}</Link> : children}
 
                     {links && (
                         <>
