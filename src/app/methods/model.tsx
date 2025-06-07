@@ -11,7 +11,7 @@ export const METHODS: iMethod = {
         sections: [
             {
                 title: "Описание технологии HVOAF",
-                image: "/hvoaf/1.webp",
+                image: "/types//hvoaf/1.webp",
                 texts: (
                     <>
                         В камеру сгорания подаются материалы покрытия (порошки, проволоки,
@@ -32,8 +32,8 @@ export const METHODS: iMethod = {
             },
         ],
         videoSection: {
-            video: "/hvoaf/video.mp4",
-            poster: "/hvoaf/poster.png",
+            video: "/types//hvoaf/video.mp4",
+            poster: "/types//hvoaf/poster.png",
             title: "Видео HVOAF напыления",
         },
         bulletSection: {
@@ -67,7 +67,7 @@ export const METHODS: iMethod = {
         },
         sections: [
             {
-                image: "/plasma/1.png",
+                image: "/types/plasma/1.png",
                 title: "Описание технологии плазменного напыления (APS)",
                 texts: (
                     <>
@@ -100,8 +100,8 @@ export const METHODS: iMethod = {
             ],
         },
         videoSection: {
-            video: "/plasma/video.mp4",
-            poster: "/plasma/poster.png",
+            video: "/types//plasma/video.mp4",
+            poster: "/types//plasma/poster.png",
             title: "Видео APS напыления",
         },
     },
@@ -115,7 +115,7 @@ export const METHODS: iMethod = {
         },
         sections: [
             {
-                image: "/flame/2.webp",
+                image: "/types/flame/2.webp",
                 title: "Описание технологии газопламенного напыления",
                 texts: (
                     <>
@@ -169,7 +169,7 @@ export const METHODS: iMethod = {
         },
         sections: [
             {
-                image: "/bronze/2.webp",
+                image: "/types/bronze/placeholder.png",
                 title: "Описание технологии наплавки бронзы",
                 texts: (
                     <>

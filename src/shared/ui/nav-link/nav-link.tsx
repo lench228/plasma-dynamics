@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { iLink } from "widgets/navigation/model";
 import { NavLinkList } from "./nav-link-list";
+import Link from "next/link";
 
 interface NavLinkProps {
     path: string;
@@ -26,15 +27,9 @@ export const NavLink = (props: NavLinkProps) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Link
-                href={path}
-                className={clsx(
-                    "group font-manrope small-text",
-                    "text-white hover:text-accent transition-colors"
-                )}
-            >
-                <div className="flex items-center gap-2">
-                    {children}
+            <div className={clsx("group font-manrope small-text", "text-white  transition-colors")}>
+                <p className="flex items-center gap-2">
+                    {path ? <Link href={path}>{children}</Link> : children}
 
                     {links && (
                         <>
@@ -56,7 +51,7 @@ export const NavLink = (props: NavLinkProps) => {
                             </motion.svg>
                         </>
                     )}
-                </div>
+                </p>
                 <AnimatePresence>
                     {isSelected && (
                         <motion.div
@@ -66,7 +61,7 @@ export const NavLink = (props: NavLinkProps) => {
                         />
                     )}
                 </AnimatePresence>
-            </Link>
+            </div>
 
             {links?.length && <NavLinkList links={links} isOpen={isHovered} />}
         </div>

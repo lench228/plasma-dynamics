@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { FOOTER_ITEMS } from "widgets/footer/model";
-import { FooterLinks } from "widgets/footer/ui/footer-links";
+
+import { LINKS } from "widgets/navigation";
+import { NavLink } from "shared/ui";
 
 export default function Footer() {
     return (
@@ -23,9 +24,17 @@ export default function Footer() {
                     технологического предпринимательства»
                 </p>
             </div>
-            {FOOTER_ITEMS.map((item) => (
-                <FooterLinks items={item.items} key={item.title} title={item.title} />
-            ))}
+
+            <ul className={"w-full flex flex-col gap-2 sm:col-span-2 items-end"}>
+                <h3 className={"font-medium mb-6 big-text"}>Карта сайта</h3>
+                {LINKS.map((link, index) => (
+                    <li key={index}>
+                        <NavLink path={link.path} isSelected={false} links={link.links}>
+                            {link.label}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
             <div className={"w-full sm:col-span-4"}>
                 <span className={"display-text"}>Plasma Dynamics</span>
                 <p className={"small-text w-full sm:w-1/7"}>

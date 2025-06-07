@@ -18,9 +18,9 @@ export const Examples = () => {
         }
     }, []);
     return (
-        <section className={"h-full sm:p-20"}>
+        <section className={"h-full sm:p-20 sm:pb-0"}>
             <header className={"flex items-center justify-between"}>
-                <h3 className={"header-3 mb-4"}>Примеры работ</h3>
+                <h3 className={"header-3 mb-6"}>Примеры работ</h3>
             </header>
             <motion.div
                 ref={containerRef}
@@ -28,7 +28,7 @@ export const Examples = () => {
                 whileTap={"grabbing"}
             >
                 <motion.ul
-                    className={"flex  w-full gap-3"}
+                    className={"flex w-4/5 gap-3"}
                     drag={"x"}
                     dragConstraints={{ right: 0, left: -width }}
                 >

@@ -63,7 +63,7 @@ export const LINKS: iNavLink[] = [
     },
     {
         label: "Научные материалы",
-        path: "/science",
+        path: "",
         links: [
             { label: "Пример 1 ", path: "/science/1" },
             { label: "Пример 2", path: "/science/2" },
@@ -71,10 +71,10 @@ export const LINKS: iNavLink[] = [
     },
     {
         label: "О нас",
-        path: "/about",
+        path: "#about",
     },
     {
         label: "Контакты",
-        path: "/contacts",
+        path: "#contacts",
     },
 ];

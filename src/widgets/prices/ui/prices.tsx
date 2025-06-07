@@ -4,7 +4,7 @@ import { PricesItem } from "widgets/prices/ui/prices-item";
 
 const Prices = () => {
     return (
-        <section className="sm:p-20">
+        <section className="sm:p-20" id={"about"}>
             <h3 className={"header-2 mb-4"}>
                 Как формируется <span className={"text-accent"}>цена</span>
             </h3>
@@ -15,7 +15,7 @@ const Prices = () => {
                 }
             >
                 {PRICE_ITEM.map((item, index) => (
-                    <PricesItem key={item.title} item={item} index={index} />
+                    <PricesItem key={item.title} item={item} index={index + 1} />
                 ))}
             </ul>
         </section>

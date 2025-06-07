@@ -22,7 +22,7 @@ export const Figure = (props: FigureProps) => {
                 variant === "types" ? "sm:gap-40 sm:mx-[-60px]" : "sm:max-h-[623px]"
             )}
         >
-            <div className={clsx(reversed ? "md:order-2" : "md:order-1", "")}>
+            <div className={clsx(reversed ? "md:order-2" : "md:order-1", "sm:p-10")}>
                 <TextContent title={item.title}>
                     <span className={"text-base"}>{item.texts}</span>
                 </TextContent>

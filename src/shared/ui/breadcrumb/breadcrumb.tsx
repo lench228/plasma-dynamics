@@ -30,7 +30,10 @@ export function BreadcrumbLink({
     return (
         <Link
             href={href}
-            className={clsx("regular-text text-[#3A3A3A] font-medium hover:underline", className)}
+            className={clsx(
+                "regular-text text-[#3A3A3A] font-medium hover:underline overflow-hidden text-ellipsis whitespace-nowrap",
+                className
+            )}
         >
             {children}
         </Link>
@@ -60,7 +63,10 @@ export function BreadcrumbPage({
 }) {
     return (
         <span
-            className={clsx("big-text font-medium text-accent underline text-ellipsis", className)}
+            className={clsx(
+                "regular-text font-medium text-accent underline text-ellipsis",
+                className
+            )}
         >
             {children}
         </span>
@@ -85,6 +91,11 @@ const pathTranslations: Record<string, string> = {
     plastics: "Перерабатывающая промышленность",
     energy: "Энергетика",
     paper: "Целлюлозно-бумажная промышленность",
+    bronze: "Наплавка бронзы",
+    "corrosion-protection": "Защита от коррозии",
+    "thermal-spray-coating": "Термонапыляемое покрытие",
+    "thermal-barrier": "Теплозащитное покрытие",
+    rfi: "EMI/RFI экранирование",
 };
 
 export default function Breadcrumbs() {
