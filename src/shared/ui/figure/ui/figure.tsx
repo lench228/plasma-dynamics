@@ -1,9 +1,11 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
+import React, { useRef } from "react";
+import Image from "next/image";
 import clsx from "clsx";
 import { TextContent } from "shared/ui/text-content";
 import { iImageSection } from "shared/types/section";
+import { motion, useInView } from "framer-motion";
 
 export interface FigureProps {
     item: iImageSection;
@@ -11,30 +13,75 @@ export interface FigureProps {
     reversed: boolean;
 }
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const columnVariants = {
+    hidden: () => ({
+        opacity: 0,
+    }),
+    visible: {
+        opacity: 1,
+
+        transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 15,
+            duration: 0.8,
+        },
+    },
+};
+
 export const Figure = (props: FigureProps) => {
-    const { item, variant, reversed } = { ...props };
+    const { item, variant, reversed } = props;
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
     return (
-        <li
+        <motion.li
+            ref={ref}
             className={clsx(
-                `grid  items-center grid-cols-1 gap-4`,
-                " md:grid-cols-2  sm:gap-0",
+                `grid items-center grid-cols-1 gap-4`,
+                "md:grid-cols-2 sm:gap-0",
                 variant === "types" ? "sm:gap-40 sm:mx-[-60px]" : "sm:max-h-[623px]"
             )}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={containerVariants}
         >
-            <div className={clsx(reversed ? "md:order-2" : "md:order-1", "sm:p-10")}>
+            <motion.div
+                variants={columnVariants}
+                className={clsx(reversed ? "md:order-2" : "md:order-1", "sm:p-10")}
+            >
                 <TextContent title={item.title}>
                     <span className={"text-base"}>{item.texts}</span>
                 </TextContent>
-            </div>
-            <div
+            </motion.div>
+
+            <motion.div
+                variants={columnVariants}
                 className={clsx(
                     reversed ? "md:order-1" : "md:order-2",
                     "relative w-full sm:aspect-[4/3] md:aspect-auto h-[500px]"
                 )}
             >
-                <Image src={item.image} alt="Пример" priority={false} fill sizes={"100"} />
-            </div>
-        </li>
+                <Image
+                    src={item.image}
+                    alt="Пример"
+                    priority={false}
+                    fill
+                    sizes="100"
+                    className="object-cover"
+                />
+            </motion.div>
+        </motion.li>
     );
 };

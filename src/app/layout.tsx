@@ -7,7 +7,7 @@ import { Examples } from "widgets/examples/ui/examples";
 
 const YandexMapSimple = dynamic(() => import("shared/lib/yamap"));
 const Navigation = dynamic(() => import("widgets/navigation"));
-const ContactUs = dynamic(() => import("widgets/contact-us"));
+// const ContactUs = dynamic(() => import("widgets/contact-us"));
 const Contacts = dynamic(() => import("widgets/contacts"));
 const Footer = dynamic(() => import("widgets/footer"));
 const Prices = dynamic(() => import("widgets/prices"));
@@ -77,7 +77,8 @@ export default function RootLayout({
                 {children}
                 <Prices />
                 <Examples />
-                <ContactUs />
+                {/**/}
+                {/*<ContactUs />*/}
                 <Contacts />
                 <YandexMapSimple />
                 <Footer />

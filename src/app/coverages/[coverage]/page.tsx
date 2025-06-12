@@ -23,23 +23,26 @@ export default async function Page({ params }: { params: Promise<{ coverage: TCo
 
             <main className={"sm:px-15 flex flex-col gap-12"}>
                 <Breadcrumbs />
-                <div className={"sm:grid sm:grid-cols-5 my-10"}>
-                    <TextContent title={data.hero.h1} className={"sm:col-span-4 !px-0"}>
-                        {data.hero.texts}
-                    </TextContent>
+                <div className={"sm:grid sm:grid-cols-4 my-10"}>
+                    <div className={"sm:col-span-3 flex flex-col gap-8 px-20"}>
+                        <TextContent title={data.hero.h1} className={""}>
+                            {data.hero.texts}
+                        </TextContent>
+                        <Bullet
+                            title={data.bulletSection.title}
+                            description={data.bulletSection.description}
+                            bullets={data.bulletSection.bullets}
+                        />
+                        <TextContent {...data.promoText} />
+
+                        {data.figures.map((figure, index) => (
+                            <Figure key={index} {...figure} variant={"types"} />
+                        ))}
+                        <TextContent {...data.footerText} />
+                    </div>
+
                     <PageNav link={LINKS.filter((item) => item.path === "/coverages")[0]} />
                 </div>
-                <Bullet
-                    title={data.bulletSection.title}
-                    description={data.bulletSection.description}
-                    bullets={data.bulletSection.bullets}
-                />
-                <TextContent {...data.promoText} />
-
-                {data.figures.map((figure, index) => (
-                    <Figure key={index} {...figure} variant={"types"} />
-                ))}
-                <TextContent {...data.footerText} />
             </main>
         </>
     );

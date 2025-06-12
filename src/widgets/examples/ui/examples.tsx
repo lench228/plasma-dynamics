@@ -20,15 +20,15 @@ export const Examples = () => {
     return (
         <section className={"h-full sm:p-20 sm:pb-0"}>
             <header className={"flex items-center justify-between"}>
-                <h3 className={"header-3 mb-6"}>Примеры работ</h3>
+                <h2 className={"header-2 mb-12 m-auto"}>Примеры работ</h2>
             </header>
             <motion.div
                 ref={containerRef}
-                className={"overflow-x-hidden h-full cursor-grab"}
+                className={"overflow-x-hidden h-full cursor-grab w-3/4 m-auto"}
                 whileTap={"grabbing"}
             >
                 <motion.ul
-                    className={"flex w-4/5 gap-3"}
+                    className={"flex  gap-3"}
                     drag={"x"}
                     dragConstraints={{ right: 0, left: -width }}
                 >

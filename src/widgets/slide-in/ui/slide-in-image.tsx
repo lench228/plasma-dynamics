@@ -7,7 +7,7 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 const imageVariants: Variants = {
     offscreen: {
         opacity: 0,
-        width: 0,
+        width: "90%",
     },
     onscreen: {
         width: "100%",

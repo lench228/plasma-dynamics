@@ -24,7 +24,7 @@ export const PricesItem = (props: PricesItemProps) => {
                         transition: {
                             type: "spring",
                             bounce: 0.1,
-                            duration: 0.8,
+                            duration: 0.8 + index / 2,
                         },
                     }}
                     className={

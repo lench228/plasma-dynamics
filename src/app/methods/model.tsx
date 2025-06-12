@@ -11,7 +11,7 @@ export const METHODS: iMethod = {
         sections: [
             {
                 title: "Описание технологии HVOAF",
-                image: "/types//hvoaf/1.webp",
+                image: "/types/hvoaf/1.webp",
                 texts: (
                     <>
                         В камеру сгорания подаются материалы покрытия (порошки, проволоки,

@@ -61,18 +61,18 @@ export const LINKS: iNavLink[] = [
             { label: "Целлюлозно-бумажная промышленность", path: "/applications/paper" },
         ],
     },
-    {
-        label: "Научные материалы",
-        path: "",
-        links: [
-            { label: "Пример 1 ", path: "/science/1" },
-            { label: "Пример 2", path: "/science/2" },
-        ],
-    },
-    {
-        label: "О нас",
-        path: "#about",
-    },
+    // {
+    //     label: "Научные материалы",
+    //     path: "",
+    //     links: [
+    //         { label: "Пример 1 ", path: "/science/1" },
+    //         { label: "Пример 2", path: "/science/2" },
+    //     ],
+    // },
+    // {
+    //     label: "О нас",
+    //     path: "#about",
+    // },
     {
         label: "Контакты",
         path: "#contacts",

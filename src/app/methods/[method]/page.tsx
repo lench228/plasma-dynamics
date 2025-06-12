@@ -19,26 +19,28 @@ export default async function Page({ params }: { params: Promise<{ method: TMeth
         <>
             <Hero title={data.hero.h1} bg={"hvof"} />
 
-            <main className={"sm:px-15 flex flex-col gap-12"}>
+            <main className={"sm:px-15 flex flex-col gap-12 "}>
                 <Breadcrumbs />
-                <div className={"grid grid-cols-3 my-10"}>
-                    <TextContent className={"sm:col-span-2 col-span-3"} title={data.hero.h2}>
-                        {data.hero.description}
-                    </TextContent>
+                <div className={"grid grid-cols-4 my-10 "}>
+                    <div className={"sm:col-span-3 flex flex-col gap-8 px-10"}>
+                        <TextContent className={""} title={data.hero.h2}>
+                            {data.hero.description}
+                        </TextContent>
+                        {data.sections.map((section, index) => (
+                            <ApplicationContent
+                                key={index}
+                                image={section.image}
+                                text={section.texts}
+                                reversed={false}
+                            />
+                        ))}
+                        {data.videoSection && <Video {...data.videoSection} />}
+
+                        <Bullet {...data.bulletSection} />
+                        <Bullet {...data.coverageSection}></Bullet>
+                    </div>
                     <PageNav link={LINKS.filter((item) => item.path === "/methods")[0]} />
                 </div>
-                {data.sections.map((section, index) => (
-                    <ApplicationContent
-                        key={index}
-                        image={section.image}
-                        text={section.texts}
-                        reversed={false}
-                    />
-                ))}
-                {data.videoSection && <Video {...data.videoSection} />}
-
-                <Bullet {...data.bulletSection} />
-                <Bullet {...data.coverageSection}></Bullet>
             </main>
         </>
     );
