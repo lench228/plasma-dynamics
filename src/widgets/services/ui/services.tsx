@@ -3,7 +3,7 @@ import { CARDS } from "widgets/services";
 import { ServiceCard } from "widgets/services/ui/serviceCard";
 import { MotionBg } from "widgets/services/ui/motion-bg";
 
-export const Services = () => {
+const Services = () => {
     return (
         <>
             <section className={"flex items-center flex-col sm:relative sm:z-3 "}>
@@ -23,3 +23,5 @@ export const Services = () => {
         </>
     );
 };
+
+export default Services;

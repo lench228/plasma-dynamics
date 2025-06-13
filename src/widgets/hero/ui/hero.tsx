@@ -34,7 +34,7 @@ const containerVariants = {
     },
 };
 
-export const Hero = (props: HeroProps) => {
+const Hero = (props: HeroProps) => {
     const { title, description, bg } = props;
 
     return (
@@ -83,3 +83,5 @@ export const Hero = (props: HeroProps) => {
         </section>
     );
 };
+
+export default Hero;

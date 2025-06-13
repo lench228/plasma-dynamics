@@ -6,7 +6,7 @@ import { Example } from "widgets/examples/ui/example";
 
 import { motion } from "framer-motion";
 
-export const Examples = () => {
+const Examples = () => {
     const [width, setWidth] = useState(0);
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -42,3 +42,5 @@ export const Examples = () => {
         </section>
     );
 };
+
+export default Examples;

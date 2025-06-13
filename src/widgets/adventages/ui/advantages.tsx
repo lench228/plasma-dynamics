@@ -2,7 +2,7 @@ import React from "react";
 import { ADVANTAGES } from "widgets/adventages/model";
 import { Figure } from "shared/ui";
 
-export const Advantages = () => {
+const Advantages = () => {
     return (
         <section>
             <ul className={"flex flex-col gap-4 sm:block"}>
@@ -22,3 +22,4 @@ export const Advantages = () => {
         </section>
     );
 };
+export default Advantages;

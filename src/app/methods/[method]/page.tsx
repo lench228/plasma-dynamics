@@ -1,5 +1,5 @@
-import { Hero } from "widgets/hero";
-import Breadcrumbs from "shared/ui/breadcrumb";
+import dynamic from "next/dynamic";
+
 import { TextContent } from "shared/ui/text-content";
 import { PageNav } from "shared/ui/page-nav/ui/page-nav";
 import { LINKS } from "widgets/navigation";
@@ -10,6 +10,9 @@ import { METHODS } from "../model";
 import { TMethod } from "../types";
 import { ApplicationContent } from "widgets/application-content";
 import { Video } from "widgets/video";
+
+const Hero = dynamic(() => import("widgets/hero"));
+const Breadcrumbs = dynamic(() => import("shared/ui/breadcrumb"));
 
 export default async function Page({ params }: { params: Promise<{ method: TMethod }> }) {
     const { method } = await params;

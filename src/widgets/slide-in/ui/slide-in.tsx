@@ -2,7 +2,7 @@ import React from "react";
 
 import { SlideInImage } from "widgets/slide-in/ui/slide-in-image";
 
-export const SlideIn = () => {
+const SlideIn = () => {
     return (
         <section className={"grid grid-cols-3  justify-end min-h-[393px]"}>
             <aside className={"text-main sm:p-20 px-4 pt-10 col-span-3 sm:col-span-2"}>
@@ -21,3 +21,5 @@ export const SlideIn = () => {
         </section>
     );
 };
+
+export default SlideIn;

@@ -3,7 +3,6 @@ import React from "react";
 import { Metadata } from "next";
 
 import dynamic from "next/dynamic";
-import { Examples } from "widgets/examples/ui/examples";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -13,6 +12,7 @@ const Navigation = dynamic(() => import("widgets/navigation"));
 const Contacts = dynamic(() => import("widgets/contacts"));
 const Footer = dynamic(() => import("widgets/footer"));
 const Prices = dynamic(() => import("widgets/prices"));
+const Examples = dynamic(() => import("widgets/examples"));
 
 export const metadata: Metadata = {
     title: "Надежное покрытие будущего - сегодня",

@@ -1,1 +1,1 @@
-export { Hero } from "./ui/hero";
+export { default } from "./ui/hero";

@@ -1,1 +1,1 @@
-export { SlideIn } from "./ui/slide-in";
+export { default } from "./ui/slide-in";
