@@ -1,4 +1,6 @@
-import { Hero } from "widgets/hero";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("widgets/hero"));
 import Breadcrumbs from "shared/ui/breadcrumb";
 import { TextContent } from "shared/ui/text-content";
 import { PageNav } from "shared/ui/page-nav/ui/page-nav";
