@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Examples } from "widgets/examples/ui/examples";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const YandexMapSimple = dynamic(() => import("shared/lib/yamap"));
 const Navigation = dynamic(() => import("widgets/navigation"));
 // const ContactUs = dynamic(() => import("widgets/contact-us"));
@@ -73,6 +75,7 @@ export default function RootLayout({
     return (
         <html lang="ru">
             <body className={"w-full "}>
+                <SpeedInsights />
                 <Navigation />
                 {children}
                 <Prices />
