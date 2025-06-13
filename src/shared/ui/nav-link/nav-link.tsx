@@ -28,7 +28,7 @@ export const NavLink = (props: NavLinkProps) => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className={clsx("group font-manrope small-text", "text-white  transition-colors")}>
-                <p className="flex items-center gap-2">
+                <p className="flex items-center gap-2 regular-text">
                     {path[0] === "#" ? <Link href={path}>{children}</Link> : children}
 
                     {links && (

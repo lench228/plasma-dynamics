@@ -72,7 +72,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <body className={"w-full"}>
+            <body className={"w-full "}>
                 <Navigation />
                 {children}
                 <Prices />

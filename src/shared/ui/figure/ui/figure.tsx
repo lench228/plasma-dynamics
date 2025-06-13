@@ -49,9 +49,9 @@ export const Figure = (props: FigureProps) => {
         <motion.li
             ref={ref}
             className={clsx(
-                `grid items-center grid-cols-1 gap-4`,
-                "md:grid-cols-2 sm:gap-0",
-                variant === "types" ? "sm:gap-40 sm:mx-[-60px]" : "sm:max-h-[623px]"
+                `xl:grid xl:items-center xl:grid-cols-2 flex flex-col `,
+                "",
+                variant === "types" ? "xl:gap-40 sm:mx-[-60px]" : "sm:max-h-[623px]"
             )}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -59,7 +59,7 @@ export const Figure = (props: FigureProps) => {
         >
             <motion.div
                 variants={columnVariants}
-                className={clsx(reversed ? "md:order-2" : "md:order-1", "sm:p-10")}
+                className={clsx(reversed ? "order-1 xl:order-2" : "md:order-1", "p-0 xl:p-10")}
             >
                 <TextContent title={item.title}>
                     <span className={"text-base"}>{item.texts}</span>
@@ -69,7 +69,7 @@ export const Figure = (props: FigureProps) => {
             <motion.div
                 variants={columnVariants}
                 className={clsx(
-                    reversed ? "md:order-1" : "md:order-2",
+                    reversed ? "xl:order-1  order-2" : "md:order-2",
                     "relative w-full sm:aspect-[4/3] md:aspect-auto h-[500px]"
                 )}
             >

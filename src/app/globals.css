@@ -126,7 +126,7 @@
 
 
     .regular-text {
-        @apply text-xl/[28px];
+        @apply text-lg/[28px];
     }
     .small-text {
         @apply text-sm/[18px];

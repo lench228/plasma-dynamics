@@ -25,9 +25,8 @@ export default async function Page({ params }: { params: Promise<{ application: 
 
             <main className={"sm:px-15 flex flex-col gap-12"}>
                 <Breadcrumbs />
-                <div className={"sm:grid sm:grid-cols-3 my-10"}>
-                    <PageNav link={LINKS.filter((item) => item.path === "/applications")[0]} />
-                    <div className={"col-span-2 flex flex-col gap-12"}>
+                <div className={"sm:grid sm:grid-cols-4 my-10"}>
+                    <div className={"col-span-3 flex flex-col gap-12 px-10"}>
                         <ApplicationContent {...data.applicationContent} />
                         {data.bulletSections.map((item) => (
                             <Bullet {...item} key={item.title} isUnderline={true} />
@@ -37,6 +36,7 @@ export default async function Page({ params }: { params: Promise<{ application: 
                             <ApplicationSpecifications {...data.specifications} />
                         )}
                     </div>
+                    <PageNav link={LINKS.filter((item) => item.path === "/applications")[0]} />
                 </div>
             </main>
         </>

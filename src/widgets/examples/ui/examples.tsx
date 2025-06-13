@@ -24,7 +24,7 @@ export const Examples = () => {
             </header>
             <motion.div
                 ref={containerRef}
-                className={"overflow-x-hidden h-full cursor-grab w-3/4 m-auto"}
+                className={"overflow-x-hidden h-full cursor-grab w-4/5 m-auto"}
                 whileTap={"grabbing"}
             >
                 <motion.ul
