@@ -29,7 +29,7 @@ export const Preloader = () => {
                             duration: 2,
                             repeat: Infinity,
                             repeatType: "mirror",
-                            ease: "anticipate",
+                            ease: "anticipate" as const,
                         }}
                     />
                     <motion.stop

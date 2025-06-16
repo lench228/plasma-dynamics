@@ -5,7 +5,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { TextContent } from "shared/ui/text-content";
 import { iImageSection } from "shared/types/section";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 export interface FigureProps {
     item: iImageSection;
@@ -13,7 +13,7 @@ export interface FigureProps {
     reversed: boolean;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -24,18 +24,16 @@ const containerVariants = {
     },
 };
 
-const columnVariants = {
-    hidden: () => ({
+const columnVariants: Variants = {
+    hidden: {
         opacity: 0,
-    }),
+    },
     visible: {
         opacity: 1,
-
         transition: {
-            type: "spring",
+            type: "spring" as const,
             stiffness: 100,
             damping: 15,
-            duration: 0.8,
         },
     },
 };

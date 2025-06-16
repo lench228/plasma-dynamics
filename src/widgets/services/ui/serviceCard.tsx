@@ -1,14 +1,15 @@
 import React from "react";
 import { iCard } from "widgets/services/model/data";
 import Image from "next/image";
-import { Button } from "shared/ui";
+import Link from "next/link";
 
 interface ServicesProps {
     item: iCard;
 }
 
 export const ServiceCard = (props: ServicesProps) => {
-    const { image, title, description } = { ...props.item };
+    const { image, title, description, href } = { ...props.item };
+
     return (
         <li className={"w-[300px] h-[600px] flex flex-col bg-white pb-5"}>
             <Image src={image} width={300} height={222} alt={"Пример"} />
@@ -18,9 +19,9 @@ export const ServiceCard = (props: ServicesProps) => {
                 </h4>
                 <p className={"small-text"}>{description}</p>
             </main>
-            <Button className={"mt-auto mx-5"} variant={"dark"}>
-                Узнать больше
-            </Button>
+            <Link className={"mt-auto mx-5 hover:text-accent transition-colors"} href={href}>
+                Узнать больше {"->"}
+            </Link>
         </li>
     );
 };

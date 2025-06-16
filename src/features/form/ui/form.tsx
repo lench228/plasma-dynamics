@@ -24,7 +24,7 @@ export const Form = () => {
                     validate={(val: string) => !!val.length}
                 />
             ))}
-            <Button tabIndex={5} variant={"white"} className={"mt-16"}>
+            <Button href={"#contacts"} tabIndex={5} variant={"white"} className={"mt-16"}>
                 Оставьте заявку
             </Button>
         </form>

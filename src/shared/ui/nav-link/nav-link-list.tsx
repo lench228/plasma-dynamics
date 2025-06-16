@@ -24,7 +24,7 @@ export const NavLinkList = React.forwardRef<HTMLDivElement, NavLinkListProps>(
                             height: "auto",
                             opacity: 1,
                             transition: {
-                                height: { duration: 0.3, ease: "easeInOut" },
+                                height: { duration: 0.3, ease: "easeInOut" as const },
                                 opacity: { duration: 0.2 },
                             },
                         }}

@@ -10,7 +10,7 @@ export const MotionBg = () => {
         target: ref,
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], ["160px", "-160px"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["200px", "-200px"]);
 
     return (
         <div ref={ref} className="w-full hidden  sm:block">

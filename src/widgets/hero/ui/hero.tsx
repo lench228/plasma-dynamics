@@ -18,7 +18,7 @@ const textVariants = {
         y: 0,
         transition: {
             duration: 0.8,
-            ease: "easeOut",
+            ease: "easeOut" as const,
         },
     },
 };
@@ -77,7 +77,9 @@ const Hero = (props: HeroProps) => {
                 )}
 
                 <motion.div variants={textVariants}>
-                    <Button variant={"white"}>Оставить заявку</Button>
+                    <Button href={"#contacts"} variant={"white"}>
+                        Оставить заявку
+                    </Button>
                 </motion.div>
             </motion.div>
         </section>
